@@ -1,0 +1,472 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    //
+    //  Shopping cart
+    //  ---------------------------------------------
+
+    // Page title
+    .page-main {
+        > .page-title-wrapper {
+            &.shopping-cart-title {
+                .page-title {
+                    .lib-heading(h2);
+                    display: block;
+                    padding: 0;
+
+                    .includeFontAwesomeIcon(@fa-var-shopping-bag, false);
+
+                    &:before {
+                        margin-right: 10px;
+                        margin-top: -7px;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // Summary block
+    .cart-summary {
+        .cart-summary-title {
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 22px;
+            color: @color-black-lighten;
+            margin-bottom: 20px;
+            font-family: 'Dosis', 'Open Sans', Helvetica, Arial, sans-serif;
+
+            &:after {
+                background-color: @color-gray;
+                content: '';
+                display: block;
+                height: 1px;
+                left: 0;
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                z-index: 0;
+            }
+
+            strong {
+                background-color: #f0f0f0;
+                display: inline-block;
+                padding: 0 25px;
+                position: relative;
+                z-index: 1;
+                font-weight: 500;
+            }
+        }
+
+        .block {
+            .fieldset {
+                margin-left: 0;
+            }
+
+            &.discount {
+                background-color: @color-white;
+                margin: -1px -15px 25px -15px;
+                overflow: hidden;
+
+                .title {
+                    border-top: none;
+                    border-bottom: 1px solid @color-gray;
+                    text-align: center;
+                    padding: 20px 10px 8px;
+                    color: @color-black-lighten;
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    font-family: 'Dosis', 'Open Sans', Helvetica, Arial, sans-serif;
+
+                    strong {
+                        font: inherit !important;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                .fieldset {
+                    &.coupon {
+                        margin: 0;
+
+                        .field {
+                            margin: 0;
+                            width: 100%;
+
+                            .input-text {
+                                padding-right: 60px;
+                                height: 40px;
+                            }
+                        }
+
+                        .actions-toolbar {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                        }
+
+                    }
+                }
+
+                .collapsible-content {
+                    align-items: center;
+                    padding-bottom: 25px;
+                    position: relative;
+                }
+
+                .collapsible-title {
+                    margin: 25px 0;
+                    padding-right: 15px;
+                }
+
+                > .content {
+                    display: block;
+                }
+            }
+
+            &.shipping {
+                margin-bottom: 20px;
+
+                .collapsible-title {
+                    padding-right: 30px;
+                }
+            }
+        }
+
+       .block .fieldset .methods .field > .label {
+            display: inline-block;
+        }
+
+        .cart-totals {
+            padding-top: 0;
+            border-top: none;
+
+            .mark {
+                text-align: right;
+                padding-left: 0;
+            }
+
+            .amount {
+                padding-right: 0;
+            }
+
+            .mark,
+            .amount {
+                font-size: 16px;
+                font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+            }
+
+            .totals.grand {
+                .mark,
+                .amount {
+                    font-size: 18px;
+                }
+
+                th,
+                td {
+                    padding-top: 25px;
+                    padding-bottom: 5px;
+                    border-top: 1px solid #b1b1b1;
+                }
+            }
+        }
+    }
+
+    //  Products table
+    .cart.table-wrapper {
+        .items {
+            thead + .item {
+                border-top: 1px dashed #dddddd;
+            }
+
+            > .item {
+                border-bottom: 1px dashed #dddddd;
+            }
+
+            th {
+                color: @color-black-lighten;
+                font-size: 18px;
+                font-weight: 400;
+                text-transform: uppercase;
+                font-family: 'Dosis', 'Open Sans', Helvetica, Arial, sans-serif;
+            }
+        }
+
+        .col {
+            min-height: 90px;
+            vertical-align: middle;
+
+            &.qty {
+                min-width: 116px;
+
+                .input-text {
+                    margin-top: 0;
+                    width: 30px;
+                }
+
+                .qty-input-holder {
+                    float: right;
+                }
+            }
+
+            &.price {
+                .price-including-tax .price,
+                .price-excluding-tax .price {
+                    font-weight: 400;
+                }
+            }
+
+            &.subtotal {
+                min-width: 140px;
+            }
+        }
+
+        .item {
+            position: relative;
+            .col {
+                &.item {
+                    min-height: 90px;
+                    padding-top: 50px;
+                    padding-left: 90px;
+                }
+            }
+
+            .item-actions {
+                td {
+                    padding: 0;
+                }
+            }
+        }
+
+        .product-image-wrapper {
+            border: 1px solid #eaeaea;
+        }
+
+        .product-item-name {
+            word-break: break-all;
+        }
+
+        .product-item-photo {
+            max-width: 80px;
+        }
+
+        .actions-toolbar {
+            float: right;
+            position: absolute;
+            right: 0;
+            margin-top: 10px;
+            z-index: 1;
+
+            > .action {
+                background: none;
+                padding: 5px;
+                border: none;
+                margin: 0;
+                font-size: 14px;
+                color: @color-gray;
+                font-family: @font-family__sans-serif;
+
+                &:before {
+                    margin-right: 0;
+                }
+
+                span {
+                    overflow: hidden;
+                    display: inline-block;
+                    width: 0;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                }
+
+                &:hover,
+                &:focus {
+                    background: none;
+                    border: none;
+                    color: @color-black;
+
+                    &:before {
+                        margin-right: 5px;
+                    }
+
+                    span {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .cart-empty-content {
+        background: @color-white url('@{baseDir}images/content/empty-cart.jpg') no-repeat center center;
+        background-size: cover;
+        margin: 40px 0;
+        padding: 40px;
+        text-align: center;
+
+        h1 {
+            .includeFontAwesomeIcon(@fa-var-trash-o, false);
+            color: @color-black-lighten;
+            font-size: 36px;
+            font-family: 'Dosis', 'Open Sans', Helvetica, Arial, sans-serif;
+            line-height: 45px;
+            margin-top: 0;
+
+            &:before {
+                margin-bottom: 40px;
+            }
+
+            small {
+                color: inherit;
+                display: block;
+                font: inherit;
+                font-size: 30px;
+            }
+        }
+    }
+
+    .cart-empty-banners-section {
+        h2 {
+            text-align: center;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .cart.table-wrapper {
+        .col {
+            &.col.qty {
+                .qty-input-holder {
+                    float: none;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+    .cart.table-wrapper {
+        .col {
+            &.col.qty,
+            &.col.price,
+            &.col.subtotal {
+                padding-top: 8px;
+                min-height: 0;
+            }
+
+            &.col.qty,
+            &.col.price {
+                width: 50%;
+            }
+
+            &.col.subtotal {
+                width: 100%;
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .cart.table-wrapper {
+        .product-item-photo {
+            float: left;
+            max-width: 100px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            width: auto;
+        }
+
+        .product-item-details {
+            clear: left;
+            display: block;
+        }
+
+        .actions-toolbar {
+            margin-top: 10px;
+        }
+
+        .item {
+            .col {
+                &.item {
+                    min-height: 187px;
+                }
+            }
+        }
+    }
+}
+
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .cart.table-wrapper {
+        .product-item-details {
+            clear: none;
+            display: table-cell;
+        }
+    }
+}
+
+// Custom media, currently does not available in Magento default
+@media only screen and (min-width: @screen__m) and (max-width: 1130px) {
+    // Styles for cart summary
+    .cart-summary {
+        width: 25%;
+
+        .cart-summary-title {
+            font-size: 18px;
+
+            &:after {
+                display: none;
+            }
+
+            strong {
+                padding: 0;
+            }
+        }
+
+        .cart-totals {
+            .mark,
+            .amount {
+                display: block;
+                padding-left: 0;
+                padding-right: 0;
+                text-align: center;
+            }
+
+            .totals.grand {
+                .mark {
+                    padding-top: 30px;
+                }
+
+                .amount {
+                    padding-top: 5px;
+                    border-top: none;
+                }
+            }
+        }
+    }
+}

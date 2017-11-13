@@ -1,0 +1,41 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .filter-options {
+        .filter-options-title {
+            .lib-heading(h3);
+
+            span {
+                padding: 0 10px;
+            }
+        }
+
+        .filter-options-content {
+            .item {
+                a {
+                    color: @primary__color;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//
+//  Divante Extend
+//  _____________________________________________
+
+@import '_extend-specific.less';

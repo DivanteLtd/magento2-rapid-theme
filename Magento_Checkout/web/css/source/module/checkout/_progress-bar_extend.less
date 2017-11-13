@@ -1,0 +1,112 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Variables
+//  _____________________________________________
+@checkout-progress-bar__font-size: 14px;
+@checkout-progress-bar__font-weight: 400;
+@checkout-progress-bar-item__background-color: @color-gray;
+@checkout-progress-bar-item__border-radius: 1px;
+@checkout-progress-bar-item__width: 280px;
+@checkout-progress-bar-item__active__background-color: @color-gray;
+@checkout-progress-bar-item-element__width: 30px;
+@checkout-progress-bar-item-element-outer-radius__width: 1px;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .opc-progress-bar {
+        margin: 0 0 30px;
+        padding: 30px 0;
+        clear: both;
+        text-align: center;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: '';
+            border: 1px dashed @color-gray-light0;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            bottom: 0;
+        }
+    }
+
+    .opc-progress-bar-item {
+        text-align: left;
+
+        &:before {
+            height: 1px;
+        }
+
+        > span {
+            padding-top: 35px;
+            text-transform: uppercase;
+
+            &:before, // Item element
+            &:after {
+                border-radius: 0;
+                left: 0;
+                text-align: center;
+            }
+
+            &:before {
+                .lib-css(margin-left, 0);
+            }
+
+            &:after {
+                .lib-css(margin-left, @checkout-progress-bar-item-element-outer-radius__width);
+                line-height: @checkout-progress-bar-item-element__width - (@checkout-progress-bar-item__border-radius*2);
+            }
+        }
+
+        &._active {
+            &:before {
+                .lib-css(background, #434343);
+            }
+
+            > span {
+                .lib-css(font-weight, 700);
+
+                &:before {
+                    .lib-css(background, #434343);
+                }
+            }
+        }
+
+        &._complete {
+            &:before {
+                .lib-css(background, @color-brown);
+            }
+
+            > span {
+                .lib-css(color, @color-brown);
+
+                &:before {
+                    .lib-css(background, @color-brown);
+                }
+
+                &:after {
+                    .lib-css(background, @color-brown);
+                    .lib-css(color, @color-white);
+                }
+            }
+        }
+    }
+}
+

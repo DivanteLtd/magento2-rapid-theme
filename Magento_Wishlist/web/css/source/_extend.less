@@ -1,0 +1,136 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .products.list.items,
+    .table-comparison {
+        .action {
+            &.towishlist {
+                .lib-icon-font-symbol(
+                        @fa-var-heart-o
+                );
+            }
+        }
+    }
+
+    .product-info-main,
+    .product-options-bottom,
+    .block-bundle-summary {
+        .action.towishlist {
+            float: left;
+            .includeFontAwesomeIcon(@fa-var-heart-o, false);
+            .lib-button(
+                @_button-margin: 0 15px 15px 0;
+            );
+
+            &:before {
+                margin-top: -10px;
+            }
+        }
+
+        .action.tocompare {
+            float: left;
+            .includeFontAwesomeIcon(@fa-var-window-restore, false);
+            .lib-button(
+                @_button-margin: 0 15px 15px 0;
+            );
+
+            &:before {
+                margin-top: -8px;
+            }
+        }
+    }
+
+    .products-grid.wishlist {
+        .product-item {
+            padding: 0 0 20px;
+
+            .product-item-inner {
+                position: static;
+            }
+
+            .product-item-info {
+                padding-bottom: 10px;
+            }
+
+            .box-tocart input.qty {
+                height: 30px;
+                width: 30px;
+            }
+
+            .product-item-photo {
+                margin: 0 auto;
+                float: none;
+            }
+
+            .product-item-name,
+            .product-item-description,
+            .price-box,
+            .product-item-tooltip {
+                margin: 0;
+            }
+
+            .box-tocart {
+                float: none;
+                margin: 0;
+            }
+
+            .product-item-actions {
+                overflow: hidden;
+
+                .actions-primary {
+                    padding: 0;
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .products-grid.wishlist {
+        .product-item-actions {
+            .actions-primary {
+                padding: 0;
+
+                .action.primary {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+
+        .product-item {
+            .fieldset {
+                .field.qty {
+                    padding-right: 0;
+
+                    .control {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//
+//  Divante Extend
+//  _____________________________________________
+
+@import '_extend-specific.less';

@@ -1,0 +1,26 @@
+<?php
+/**
+ * @package Divante/rapid
+ * @author Kacper Chara <kchara@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+
+/**  @var $block \Magento\Checkout\Block\Cart */
+?>
+
+<div class="cart-empty-content">
+    <article>
+        <h1>
+            <small><?php echo __('Unfortunately,'); ?></small>
+            <?php echo __('Your Shopping Cart is empty'); ?>
+        </h1>
+        <a href="<?php echo $block->escapeUrl($block->getContinueShoppingUrl()); ?>" class="action continue as-button">
+            <?php echo __('Continue shopping'); ?>
+        </a>
+    </article>
+</div>
+
+<?php echo $block->getChildHtml('cart.empty.additional.banners.section'); ?>
+<?php echo $block->getChildHtml('checkout_cart_empty_widget'); ?>
+<?php echo $block->getChildHtml('shopping.cart.table.after'); ?>

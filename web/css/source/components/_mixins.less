@@ -1,0 +1,87 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+.primary-heading() {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:after {
+        background-color: @color-beige;
+        content: '';
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        z-index: 0;
+    }
+
+    span,
+    strong {
+        background-color: @color-white;
+        display: inline-block;
+        padding: 0 @indent__m;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+// Mixin for font awesome icons
+// Usage (if button is only single icon): .some-button-class { .includeFontAwesomeIcon(@fa-var-heart-o); }
+// Usage (if button has additional text): .some-button-class { .includeFontAwesomeIcon(@fa-var-heart-o, false); }
+
+.includeFontAwesomeIcon (@contentChar, @onlyIcon: true, @position: before) {
+    & when (@position = before) {
+        &:before {
+            content: @contentChar;
+            .fa-icon();
+            vertical-align: middle;
+
+            & when (@onlyIcon = false) {
+                margin-right: 5px;
+            }
+        }
+
+        & when (@onlyIcon = true) {
+            font-size: 0;
+
+            &:before {
+                font-size: 18px;
+            }
+        }
+    }
+
+    & when (@position = after) {
+        &:after {
+            content: @contentChar;
+            .fa-icon();
+            vertical-align: middle;
+
+            & when (@onlyIcon = false) {
+                margin-right: 5px;
+            }
+        }
+
+        & when (@onlyIcon = true) {
+            font-size: 0;
+
+            &:after {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+// Transition
+.transition (@transition) {
+    -webkit-transition: @transition;
+    -moz-transition:    @transition;
+    -ms-transition:     @transition;
+    -o-transition:      @transition;
+}

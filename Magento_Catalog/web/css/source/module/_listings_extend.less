@@ -1,0 +1,305 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .product {
+        &-items {
+            .product-item {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-item {
+            &-name {
+                font-family: @font-family-name__second;
+                text-transform: none;
+            }
+
+            &-info {
+                .page-products & {
+                    width: 100%;
+                }
+            }
+
+            &-actions {
+                display: table;
+                width: 100%;
+                position: relative;
+
+                .actions-primary {
+                    padding-right: 41px;
+                    vertical-align: top;
+                    display: table-cell;
+                    text-align: left;
+                    width: 100%;
+
+                    .action {
+                        padding-left: 7px;
+                        padding-right: 7px;
+                        white-space: normal;
+                    }
+
+                    .stock {
+                        min-height: 40px;
+                        line-height: 40px;
+                    }
+                }
+
+                .actions-secondary {
+                    overflow: hidden;
+                    display: block;
+                    text-align: right;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: auto;
+
+                    > .action {
+                        .lib-button-primary();
+                        padding: 0;
+                        width: 40px;
+                        height: 40px;
+                        line-height: 31px;
+                        float: left;
+                        margin-left: 5px;
+                        text-align: center;
+                        font-size: 18px;
+
+                        &:first-child,
+                        &:only-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+
+            .price-box {
+                .price {
+                    .lib-font-size(16);
+                    color: @primary__color;
+                    font-weight: 400;
+                }
+
+                .price-label {
+                    display: none;
+                }
+            }
+
+            &-brand {
+                color: @color-black;
+                font-weight: 700;
+                font-size: 14px;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+
+            &-name {
+                font-weight: 400;
+                font-size: 18px;
+            }
+
+            .tocompare {
+                .lib-icon-font-symbol(
+                        @fa-var-window-restore
+                );
+            }
+
+            .towishlist {
+                .lib-icon-font-symbol(
+                        @fa-var-heart-o
+                );
+            }
+        }
+    }
+
+    .column.main {
+        .product-item {
+            padding-left: 0;
+        }
+
+        .product-items {
+            margin-left: 0;
+        }
+    }
+
+    // Product Grid
+    .products-grid {
+        .product-items {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .product-item {
+            float: left;
+            text-align: center;
+
+            .product-item-brand {
+                display: none;
+            }
+
+            .product-item-info {
+                padding: 10px 10px 60px;
+                position: relative;
+                height: 100%;
+            }
+
+            .product-item-inner {
+                position: absolute;
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+            }
+
+            .product-reviews-summary {
+                display: inline-block;
+
+                .reviews-actions {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    // Product List
+    .products-list {
+        overflow: hidden;
+
+        .product {
+            &-item {
+                &-photo {
+                    .photo {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        .product-item-photo {
+            padding: 0 10px 0 0;
+            width: 30%;
+        }
+
+        .product-image-container {
+            width: 100% !important;
+        }
+
+        .product-item-actions {
+            display: block;
+            margin-top: 30px;
+            overflow: hidden;
+
+            .actions-primary {
+                display: inline-block;
+                padding-right: 5px;
+                float: left;
+                width: auto;
+            }
+
+            .actions-secondary {
+                position: static;
+                float: left;
+            }
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .products-list {
+        .product-item-photo {
+            padding-right: 30px;
+        }
+    }
+
+    .product {
+        &-item {
+            .products-grid & {
+                .catalog-category-view & {
+                    &:nth-child(2n+1) {
+                        clear: none;
+                    }
+
+                    &:nth-child(3n+1) {
+                        clear: left;
+                    }
+                }
+            }
+
+            &-actions {
+                .actions-primary + .actions-secondary {
+                    display: block;
+                    width: auto;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    .products-grid .product-item-actions {
+        margin: 0;
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .product-items {
+        .product-item {
+            margin-bottom: 30px;
+        }
+    }
+
+    .product-item-actions {
+        .actions-primary {
+            padding-right: 82px;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .page-products {
+        .products-grid {
+            .product-item {
+                width: 100%/3;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+// Custom media, currently does not available in Magento default
+@media only screen and (min-width: 1025px){
+    .products-grid {
+        .product-item {
+            .product-item-info {
+                &:hover,
+                &:focus {
+                    background: #f9f9f9;
+
+                    .swatch-attribute,
+                    .product-item-inner {
+                        visibility: visible;
+                    }
+                }
+            }
+
+            .swatch-attribute,
+            .product-item-inner {
+                visibility: hidden;
+            }
+        }
+    }
+}

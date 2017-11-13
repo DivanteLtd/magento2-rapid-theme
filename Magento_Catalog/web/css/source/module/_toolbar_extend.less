@@ -1,0 +1,79 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+@toolbar-mode-icon-font-size: 24px;
+@toolbar-element-background: @color-gray-light;
+
+& when (@media-common = true) {
+    .toolbar-products {
+        padding: 10px;
+        background: @toolbar-element-background;
+    }
+
+    .sorter-action {
+        .lib-icon-font(
+                @icon-arrow-up,
+            @_icon-font-size: 28px,
+            @_icon-font-line-height: 36px,
+            @_icon-font-color: @color-brown,
+            @_icon-font-color-hover: @primary__color,
+            @_icon-font-text-hide: true
+        );
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .modes-mode {
+        .lib-css(color, @color-brown);
+        border: 1px solid @color-brown;
+        margin-right: 10px;
+        padding: 10px;
+        text-align: center;
+
+        &:last-child {
+            border-right: 1px solid @color-brown;
+        }
+
+        &:not(.active) {
+            &:hover {
+                .lib-css(color, @primary__color);
+                border-color: @primary__color;
+            }
+        }
+
+        &.active {
+            .lib-css(color, @primary__color);
+
+            border-color: @primary__color;
+
+            &:before {
+                color: @primary__color;
+            }
+        }
+
+        .lib-icon-font(
+                @fa-var-th-large,
+            @_icon-font: 'FontAwesome',
+            @_icon-font-size: @toolbar-mode-icon-font-size,
+            @_icon-font-text-hide: true,
+            @_icon-font-color: @color-brown,
+            @_icon-font-color-hover: @primary__color
+        );
+    }
+
+    .mode-list {
+        .lib-icon-font-symbol(@fa-var-list);
+    }
+}

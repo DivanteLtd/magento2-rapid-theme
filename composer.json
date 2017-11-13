@@ -1,0 +1,23 @@
+{
+  "name": "divante/theme-frontend-rapid",
+  "description": "Divante Rapid Theme for Magento 2",
+  "version": "2.1.3",
+  "require": {
+    "divante/module-uikit": "^1.0"
+  },
+  "type": "magento2-theme",
+  "license": [
+    "MIT"
+  ],
+  "authors": [
+    {
+      "name": "Bartosz Picho",
+      "email": "bpicho@divante.pl"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Variables
+//  _____________________________________________
+
+@checkout-summary__padding: 15px 20px;
+@checkout-summary-items__padding: 0;
+@checkout-summary-items__max-height: 260px;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    //
+    //  Order Summary
+    //  ---------------------------------------------
+
+    .opc-block-summary {
+
+        //
+        //  Items list
+        //  ---------------------------------------------
+
+        //  Block title
+        .items-in-cart {
+            margin-bottom: 20px;
+
+            .minicart-items {
+                margin: 0;
+            }
+        }
+
+        .summary-footer {
+            background-color: @color-brown;
+            margin: 0 -20px -15px;
+            padding: 20px;
+            font-family: @font-family-name__second;
+
+            .title {
+                strong {
+                    color: @color-white;
+                    display: block;
+                    font-size: 18px;
+                    font-weight: 400;
+                    margin-bottom: 10px;
+                    text-align: right;
+
+                    .count {
+                        display: inline-block;
+                        font-weight: 700;
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            .action.primary.continue {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}

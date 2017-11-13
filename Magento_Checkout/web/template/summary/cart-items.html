@@ -1,0 +1,47 @@
+<!--
+/**
+* @package Divante/rapid
+* @author Kacper Chara <kchara@divante.pl>
+* @copyright 2017 Divante Sp. z o.o.
+* @license See LICENSE_DIVANTE.txt for license details.
+*/
+-->
+
+<!-- ko ifnot: isItemsBlockExpanded() -->
+<div class="block items-in-cart">
+    <div class="content minicart-items" data-role="content">
+        <div class="minicart-items-wrapper overflowed">
+            <ol class="minicart-items" data-bind="afterRender: initScroll">
+                <!-- ko foreach: getItems() -->
+                <li class="product-item">
+                    <div class="product">
+                        <!-- ko foreach: $parent.elems() -->
+                        <!-- ko template: getTemplate() --><!-- /ko -->
+                        <!-- /ko -->
+                    </div>
+                </li>
+                <!-- /ko -->
+            </ol>
+        </div>
+    </div>
+</div>
+<!-- /ko -->
+<!-- ko if: isItemsBlockExpanded() -->
+<div class="block items-in-cart">
+    <div class="content minicart-items" data-role="content">
+        <div class="minicart-items-wrapper overflowed">
+            <ol class="minicart-items" data-bind="afterRender: initScroll">
+                <!-- ko foreach: getItems() -->
+                <li class="product-item">
+                    <div class="product">
+                        <!-- ko foreach: $parent.elems() -->
+                        <!-- ko template: getTemplate() --><!-- /ko -->
+                        <!-- /ko -->
+                    </div>
+                </li>
+                <!-- /ko -->
+            </ol>
+        </div>
+    </div>
+</div>
+<!-- /ko -->

@@ -1,0 +1,33 @@
+<?php
+/**
+ * @package Divante/rapid
+ * @author Kacper Chara <kchara@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+?>
+<?php
+/**
+ * New Customer block template
+ *
+ * @var $block \Magento\Customer\Block\Form\Login\Info
+ */
+?>
+<?php if ($block->getRegistration()->isAllowed()): ?>
+<div class="block block-new-customer">
+    <div class="block-centered">
+        <div class="block-title">
+            <strong id="block-new-customer-heading" role="heading" aria-level="2"><?php /* @escapeNotVerified */ echo __('New Customers') ?></strong>
+        </div>
+        <div class="block-content" aria-labelledby="block-new-customer-heading">
+            <p><?php /* @escapeNotVerified */ echo __('Not a member? Sign up now!') ?></p>
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <a href="<?php /* @escapeNotVerified */ echo $block->getCreateAccountUrl() ?>" class="action create primary as-button"><span><?php /* @escapeNotVerified */ echo __('Sign Up') ?></span></a>
+                </div>
+            </div>
+            <?php echo $block->getChildHtml('advantages.with.account'); ?>
+        </div>
+    </div>
+</div>
+<?php endif; ?>

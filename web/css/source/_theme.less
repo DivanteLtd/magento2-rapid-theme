@@ -1,0 +1,425 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Custom Local Variables - Not Magento
+//  _____________________________________________
+
+// Custom scrollbar variables
+@scrollbar__width: 4px;
+@scrollbar__border-radius: 0;
+@scrollbar__color: #dadada;
+@scrollbar__active__color: @link__color;
+
+// Local colors
+@color-brown:           #a66b29;
+@color-beige:           #feeed3;
+@color-black-lighten:   #434343;
+@color-gray:            #b1b1b1;
+@color-gray-light:      #f0f0f0;
+@color-red:             #e85252;
+@color-green:           #5eb257;
+
+// Button on dark background
+@button-on-dark-bg__background: transparent;
+@button-on-dark-bg__border: 1px solid @color-white;
+@button-on-dark-bg__color: @color-white;
+@button-on-dark-bg__font-weight: 500;
+
+@button-on-dark-bg__hover__background: @color-white;
+@button-on-dark-bg__hover__border: 1px solid @color-white;
+@button-on-dark-bg__hover__color: @button-primary__color;
+
+// Checkboxes
+@checkbox__size: 20px;
+@checkbox__border__size: 1px;
+
+@checkbox__border__color: @color-gray;
+@checkbox__hover__border__color: @color-gray;
+
+@checkbox__background__color: @color-white;
+@checkbox__hover__background__color: @link__color;
+
+@checkbox__disabled__border__color: lighten(@checkbox__border__color, 20%);
+@checkbox__disabled__background__color: lighten(@checkbox__background__color, 20%);
+
+@checkbox__disabled-and-checked__border__color: lighten(@checkbox__border__color, 20%);
+@checkbox__disabled-and-checked__background__color: lighten(@checkbox__border__color, 20%);
+
+// Pager
+@pager-item__min-width: 36px;
+
+// Main Navigation
+@navigation-desktop-level0-item__text-transform: uppercase;
+
+// Font families
+@font-family-name__first: 'Open Sans', 'Dosis', Helvetica, Arial, sans-serif;
+@font-family-name__second: 'Dosis', 'Open Sans', Helvetica, Arial, sans-serif;
+
+
+
+
+//
+//  Magento Variables - overwriting Magento Blank or lib
+//  _____________________________________________
+
+//
+//  Theme variables - overwriting vendor/magento/theme-frontend-blank/Magento_Theme/web/css/source/_module.less
+//  _____________________________________________
+
+@header-icons-color: @color-white;
+@header__background-color: rgba(0, 0, 0, 0.54);
+
+@addto-color: #434343;
+@addto-hover-color: @color-white;
+
+@minicart-icons-color: @color-white;
+@minicart-icons-color-hover: @color-brown;
+
+//
+//  Color variables - overwriting lib/web/css/source/lib/variables/_colors.less
+//  _____________________________________________
+
+//
+//  Nesting
+//  ---------------------------------------------
+
+@primary__color:        @color-black-lighten;
+@secondary__color:      @color-gray;
+@border__color:         @color-gray;
+
+
+//
+//  Typography variables - overwriting lib/web/css/source/lib/variables/_typography.less
+//  _____________________________________________
+
+//
+//  Fonts
+//  ---------------------------------------------
+
+//  Font families
+@font-family__base: @font-family-name__first;
+@font-family__sans-serif: @font-family-name__first;
+
+//  Sizes
+@font-size__s:          12px;
+@font-size__m:          14px;
+@font-size__l:          16px;
+@font-size__xl:         18px;
+
+//
+//  Indents
+//  ---------------------------------------------
+
+@indent__base:	        20px;
+@indent__xl:            40px;
+@indent__l:             30px;
+@indent__m:             20px;
+@indent__s:             10px;
+@indent__xs:            5px;
+
+//
+//  Links
+//  ---------------------------------------------
+
+@link__color: @color-brown;
+@link__text-decoration: none;
+@link__visited__color: @link__color;
+@link__visited__text-decoration: none;
+@link__hover__color: @link__color;
+@link__hover__text-decoration: underline;
+@link__active__color: @primary__color;
+@link__active__text-decoration: none;
+
+//
+//  Focus
+//  ---------------------------------------------
+
+@focus__color: #dadada;
+
+
+//
+//  Headings
+//  ---------------------------------------------
+
+@heading__color__base: @primary__color;
+
+@h1__margin-top: 20px;
+@h1__font-weight: 400;
+
+
+//
+//  Layout - overwriting lib/web/css/source/lib/variables/_layout.less
+//  ---------------------------------------------
+
+//  Widths
+@layout__max-width: 1170px;
+@layout-indent__width: 15px;
+@layout__width-xs-indent: 10px;
+
+//  Variables for layout columns
+@layout-column__sidebar-width: 3;
+
+
+//
+//  Layout - overwriting vendor/magento/theme-frontend-blank/web/css/source/_layout.less
+//  ---------------------------------------------
+@layout-column-main__sidebar-offset: 20px;
+
+
+//
+//  Navigation - overwriting lib/web/css/source/lib/variables/_navigation.less
+//  ---------------------------------------------
+
+@navigation__background: transparent;
+@navigation-level0-item__color: @color-white;
+@submenu-item__color: @color-white;
+
+//
+//  Desktop navigation
+//  ---------------------------------------------
+
+@navigation-desktop__font-weight: 400;
+@navigation-desktop-level0-item__line-height: 32px;
+@navigation-desktop-level0-item__color: @color-white;
+@navigation-desktop-level0-item__hover__color: @color-white;
+
+@submenu-desktop__background: #000000;
+@submenu-desktop__border-width: 0;
+@submenu-desktop__font-weight: 400;
+@submenu-desktop-item__hover__background: #434343;
+
+//
+//  Footer - overwriting vendor/magento/theme-frontend-blank/Magento_Theme/web/css/source/_module.less
+//  ---------------------------------------------
+
+//  Footer
+@footer__background-color: #2e261d;
+
+//
+//  Buttons variables - overwriting lib/web/css/source/lib/variables/_buttons.less
+//  ---------------------------------------------
+
+//  Font style
+@button__font-family: @font-family-name__second;
+@button__font-weight: 400;
+@button__font-size: 16px;
+@button__line-height: @button__font-size + 2;
+@button__border-radius: 0;
+@button__padding: 10px 20px;
+
+//  Default = secondary button
+@button__background: @color-white;
+@button__border: 1px solid #434343;
+@button__color: #434343;
+@button__hover__background: #434343;
+@button__hover__border: 1px solid #434343;
+@button__hover__color: @color-white;
+@button__active__color: @color-white;
+
+//  Primary button
+@button-primary__background: #ebebeb;
+@button-primary__border: 1px solid #ebebeb;
+@button-primary__color: #434343;
+@button-primary__hover__background: #434343;
+@button-primary__hover__border: 1px solid #434343;
+@button-primary__hover__color: @color-white;
+@button-primary__active__color: @color-white;
+@button-primary__line-height: @button__line-height;
+
+//
+//  Breadcrumbs variables - overwriting lib/web/css/source/lib/variables/_breadcrumbs.less
+//  ---------------------------------------------
+
+@breadcrumbs__font-size: 12px;
+@breadcrumbs__container-margin: 20px 0;
+@breadcrumbs-current__color: @color-black;
+@breadcrumbs-link__color: @color-brown;
+@breadcrumbs-link__visited__color: @color-brown;
+@breadcrumbs-link__hover__color: @color-brown;
+@breadcrumbs-link__active__color: @color-brown;
+
+
+//
+//  Rating variables - overwriting lib/web/css/source/lib/variables/_rating.less
+//  ---------------------------------------------
+
+@rating-icon__color: @color-brown;
+@rating-icon__active__color: @color-brown;
+
+//
+//  Form variables - lib/web/css/source/lib/variables/_forms.less
+//  _____________________________________________
+
+//
+//  Form elements inputs default variables
+//  ---------------------------------------------
+
+@form-element-input__border-color: #dadada;
+@form-element-input__border-radius: 0;
+@form-element-input__width: 100%;
+@form-element-input__height: 36px;
+@form-element-input__padding: 0 10px;
+@form-element-input__font-size: 12px;
+@form-element-input__color: #434343;
+@form-element-input__font-weight: 400;
+@form-element-input__line-height: normal;
+@form-element-input__border-radius: 0;
+@form-element-input__background-clip: border-box;
+@form-element-input__font-family: @font-family-name__first;
+
+//  Disabled state
+@form-element-input__disabled__background: #f0f0f0;
+@form-element-input__disabled__border: 1px solid @form-element-input__border-color;
+@form-element-input__disabled__opacity: 1;
+
+//  Placeholder
+@form-element-input-placeholder__color: #434343;
+@form-element-input-placeholder__font-style: normal;
+
+
+//
+//  Validation
+//  ---------------------------------------------
+@form-element-validation__border-error: @color-red;
+
+
+//
+//  Icons variables - overwriting lib/web/css/source/lib/variables/_icons.less
+//  _____________________________________________
+
+@icon-calendar__font-size: 36px;
+
+
+//
+//  Tooltips variables - overwriting lib/web/css/source/lib/variables/_tooltips.less
+//  _____________________________________________
+
+@tooltip__background: @color-white;
+@tooltip__border-color: #dadada;
+@tooltip__cursor: pointer;
+@tooltip__font-style: italic;
+@tooltip__font-weight: 400;
+@tooltip-arrow__offset: 6px;
+
+
+//
+//  Dropdowns variables - overwriting lib/web/css/source/lib/variables/_dropdowns.less
+//  _____________________________________________
+
+//
+//  Variables simple dropdown
+//  ---------------------------------------------
+@dropdown-list__border: 1px solid @secondary__color;
+@dropdown-list__shadow: none;
+
+
+//
+//  Messages variables - overwriting lib/web/css/source/lib/variables/_messages.less
+//  _____________________________________________
+
+@message__border-width: 1px;
+@message__border-style: solid;
+@message__padding: 10px 40px 10px 20px;
+
+//  Information message
+@message-info__color:   #e5aa45;
+@message-info__background: false;
+@message-info__border-color: @message-info__color;
+@message-info-link__color: @message-info__color;
+@message-info-link__color-hover: darken(@message-info__color, 35%);
+@message-info-link__color-active: darken(@message-info__color, 35%);
+
+//  Warning message
+@message-warning__color: #a93434;
+@message-warning__background: false;
+@message-warning__border-color: darken(@message-warning__color, 30%);
+@message-warning-link__color: darken(@message-warning__color, 30%);
+@message-warning-link__color-hover: darken(@message-warning__color, 30%);
+@message-warning-link__color-active: darken(@message-warning__color, 30%);
+
+//  Error message
+@message-error__color: #e85252;
+@message-error__background: false;
+@message-error__border-color: @message-error__color;
+
+@message-error-link__color: @message-error__color;
+@message-error-link__color-hover: darken(@message-error__color, 35%);
+@message-error-link__color-active: darken(@message-error__color, 35%);
+
+//  Success message
+@message-success__color: #5eb257;
+@message-success__background: false;
+@message-success__border-color: @message-success__color;
+@message-success-link__color: @message-success__color;
+@message-success-link__color-hover: darken(@message-success__color, 35%);
+@message-success-link__color-active: darken(@message-success__color, 35%);
+
+//  Global message
+@message-global-caution__background: #FF4C4C;
+@message-global-caution__border-color: @color-white;
+@message-global-caution__color: @color-white;
+
+//
+//  Pager variables - overwriting lib/web/css/source/lib/variables/_pages.less
+//  _____________________________________________
+
+@pager__font-size: 14px;
+@pager__font-weight: 400;
+
+//  Pager link default
+@pager__background: transparent;
+
+//  Pager link.action default
+@pager-action__border: false;
+
+
+//
+//  Sidebar - overwriting vendor/magento/theme-frontend-blank/web/css/source/_variables.less
+//  ---------------------------------------------
+
+//
+//  Sidebar
+//  ---------------------------------------------
+@sidebar__background-color: @color-gray-light;
+
+
+//
+//  Rating variables - overwriting lib/web/css/source/lib/variables/_rating.less
+//  _____________________________________________
+
+@rating-icon__color: @color-gray;
+@rating-icon__active__color: @color-brown;
+
+
+//
+//  Sections variables - overwriting lib/web/css/source/lib/variables/_sections.less
+//  _____________________________________________
+
+//
+//  Tabs
+//  ---------------------------------------------
+
+//  Tabs controls
+@tab-control__padding-top: 10px;
+@tab-control__padding-right: 15px;
+@tab-control__padding-bottom: 10px;
+@tab-control__padding-left: 15px;
+
+//
+//  Accordions
+//  ---------------------------------------------
+
+@accordion-control__padding-top: 0;
+@accordion-control__padding-bottom: 0;
+
+
+//
+//  Pager variables - overwriting lib/web/css/source/lib/variables/_pages.less
+//  _____________________________________________
+
+@pager__line-height: 36px;

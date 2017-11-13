@@ -1,0 +1,33 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Variables
+//  _____________________________________________
+
+@checkout-payment-option-title-icon__font-size: 28px;
+@checkout-payment-option-title-icon__margin: 0 0 0 -4px;
+@checkout-payment-option-title-icon__color: inherit;
+@checkout-payment-option-title-icon__hover__color: inherit;
+
+@checkout-payment-option-content__padding__xl: 20px;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .checkout-payment-method {
+        .payment-option-title {
+            .lib-css(padding, @checkout-payment-option-content__padding__xl);
+        }
+
+        .payment-option-content {
+            .lib-css(padding, 0 @checkout-payment-option-content__padding__xl);
+        }
+    }
+}

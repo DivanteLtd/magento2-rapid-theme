@@ -1,0 +1,45 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .review-field-ratings {
+        .review-field-rating {
+            .label {
+                display: none;
+            }
+            
+            .review-control-vote {
+                padding: 0;
+                display: inline-block;
+                overflow: hidden;
+                margin: 0;
+                height: 28px;
+            }
+        }
+    }
+
+    .product-reviews-summary {
+        .rating-summary,
+        .reviews-actions {
+            display: inline-block;
+        }
+
+        .rating-summary {
+            position: static;
+        }
+    }
+}
+
+//
+//  Divante Extend
+//  _____________________________________________
+
+@import '_extend-specific.less';

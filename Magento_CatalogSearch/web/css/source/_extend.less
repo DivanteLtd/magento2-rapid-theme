@@ -1,0 +1,68 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .block-search {
+        .action.advanced {
+            color: @color-white;
+        }
+
+        .label {
+            line-height: 33px;
+            height: 33px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            .lib-icon-font-size(
+                @_icon-font-size: 30px,
+                @_icon-font-line-height: inherit,
+                @_icon-font-position: before
+            );
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .block-search {
+        .action.search {
+            color: #000000;
+            width: 35px;
+            height: 35px;
+            right: 0;
+
+            .lib-button-icon(
+                @_icon-font-content: @icon-search,
+                @_icon-font-text-hide: true,
+                @_icon-font-color: #000000
+            );
+
+            &:hover {
+                &:before {
+                    color: @color-brown;
+                }
+            }
+        }
+    }
+}
+
+
+//
+//  Divante Extend
+//  _____________________________________________
+
+@import '_extend-specific.less';

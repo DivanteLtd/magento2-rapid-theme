@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package Divante/rapid
+ * @author Kacper Chara <kchara@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="checkout.cart.coupon" destination="cart.summary" before="-"/>
+        <referenceBlock name="page.main.title">
+            <arguments>
+                <argument name="css_class" xsi:type="string">shopping-cart-title</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="cart.summary">
+            <container name="cart.summary.title" htmlTag="div" htmlClass="cart-summary-title" before="-"/>
+            <move element="checkout.cart.summary.title" destination="cart.summary.title"/>
+        </referenceBlock>
+
+        <referenceContainer name="checkout.cart.noitems">
+            <container name="cart.empty.additional.banners.section" htmlClass="cart-empty-banners-section" htmlTag="section">
+                <block class="Magento\Framework\View\Element\Template" name="checkout.cart.noitems.additional.banners"
+                       template="Magento_Checkout::cart/empty-cart-banners.phtml">
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

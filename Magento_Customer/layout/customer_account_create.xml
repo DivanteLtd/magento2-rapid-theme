@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package Divante/rapid
+ * @author Kacper Chara <kchara@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="breadcrumbs">
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">home</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Home</item>
+                    <item name="label" xsi:type="string">Home</item>
+                    <item name="link" xsi:type="string">/</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Customer Login</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Customer Login</item>
+                    <item name="label" xsi:type="string">Customer Login</item>
+                </argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="page.main.title" remove="true"/>
+        <referenceContainer name="content">
+            <container name="customer.registration.container" label="Registration Container" htmlTag="div" htmlClass="registration-container">
+                <block class="Magento\Framework\View\Element\Template" name="sidebar.additional.registration" template="Magento_Customer::sidebar.phtml">
+                    <block class="Magento\Framework\View\Element\Template" name="advantages.with.account" template="Magento_Customer::/advantages-with-account.phtml"/>
+                </block>
+            </container>
+        </referenceContainer>
+        <move element="customer_form_register" destination="customer.registration.container" before="sidebar.additional.registration"/>
+    </body>
+</page>

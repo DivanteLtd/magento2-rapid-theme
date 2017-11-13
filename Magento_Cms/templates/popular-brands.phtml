@@ -1,0 +1,104 @@
+<?php
+/**
+ * @package Divante/rapid
+ * @author Kacper Chara <kchara@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+
+/**
+ * @var $block Magento\Framework\View\Element\Template
+ */
+?>
+
+<h2 class="second-style-heading line-on-sides">
+    <span><?php echo __('Popular Brands'); ?></span>
+</h2>
+
+<div class="basic-carousel">
+    <div class="equal-height-slides"
+         data-mage-init='{
+            "slider": {
+                "arrows": false,
+                "dots": false,
+                "useCSS": false,
+                "useTransform": false,
+                "slidesToShow": 5,
+                "autoplay": true,
+                "infinite": true,
+                "responsive": [
+                {
+                  "breakpoint": 1024,
+                  "settings": {
+                    "slidesToShow": 4,
+                    "slidesToScroll": 1
+                  }
+                },
+                {
+                  "breakpoint": 768,
+                  "settings": {
+                    "slidesToShow": 3,
+                    "slidesToScroll": 1
+                  }
+                },
+                {
+                  "breakpoint": 480,
+                  "settings": {
+                    "slidesToShow": 2,
+                    "slidesToScroll": 1
+                  }
+                }]
+            }}'>
+        <div>
+            <a href="#"><img class="basic-carousel-img" src="<?php echo $block->getViewFileUrl('images/content/brands/logo-brand1.jpg'); ?>" alt="Brand Name 1"></a>
+        </div>
+        <div>
+            <a href="#"><img class="basic-carousel-img" src="<?php echo $block->getViewFileUrl('images/content/brands/logo-brand2.jpg'); ?>" alt="Brand Name 2"></a>
+        </div>
+        <div>
+            <a href="#"><img class="basic-carousel-img" src="<?php echo $block->getViewFileUrl('images/content/brands/logo-brand3.jpg'); ?>" alt="Brand Name 3"></a>
+        </div>
+        <div>
+            <a href="#"><img class="basic-carousel-img" src="<?php echo $block->getViewFileUrl('images/content/brands/logo-brand4.jpg'); ?>" alt="Brand Name 4"></a>
+        </div>
+        <div>
+            <a href="#"><img class="basic-carousel-img" src="<?php echo $block->getViewFileUrl('images/content/brands/logo-brand5.jpg'); ?>" alt="Brand Name 5"></a>
+        </div>
+        <div>
+            <a href="#"><img class="basic-carousel-img" src="<?php echo $block->getViewFileUrl('images/content/brands/logo-brand6.jpg'); ?>" alt="Brand Name 6"></a>
+        </div>
+    </div>
+</div>
+
+<div class="banners">
+    <div class="banners-row">
+        <div class="banner banner-1-2" style="background-image: url(<?php echo $block->getViewFileUrl('images/content/banners/banner1.jpg'); ?>)">
+            <div class="banner-content valign-top">
+                <h4 class="banner-tag">Outlet</h4>
+                <h3 class="banner-title">Stylish sunglasses</h3>
+                <p class="banner-description">Choose from the coolest new and <br />classic frames, lenses, and colors to <br />find the shades that match your style.</p>
+                <a href="#" class="action on-dark-bg primary">SHOP NOW</a>
+            </div>
+        </div>
+
+        <div class="banner banner-1-2" style="background-image: url(<?php echo $block->getViewFileUrl('images/content/banners/banner2.jpg'); ?>)">
+            <div class="banner-content valign-top">
+                <h4 class="banner-tag">Outlet</h4>
+                <h3 class="banner-title">Boots for any <br />occasion</h3>
+                <p class="banner-description">Determining the look and feel of the <br />outfit can be done by selecting the <br />right pair of leather shoes.</p>
+                <a href="#" class="action on-dark-bg primary">SHOP NOW</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="banner banner-1-1" style="background-image: url(<?php echo $block->getViewFileUrl('images/content/banners/banner3.jpg'); ?>)">
+        <div class="banner-content valign-bottom">
+            <h4 class="banner-tag">New</h4>
+            <h3 class="banner-title">Boots for any <br />occasion</h3>
+            <p class="banner-description">Determining the look and feel of the outfit can be done <br />by selecting the right pair of black boots.<br />
+            Look for suede, distressed leather or a lower cut to give <br />a more casual, relaxed vibe.
+            Aim for more polished <br />leather, simple embellishments like buckles.</p>
+            <a href="#" class="action on-dark-bg primary">View and shop now</a>
+        </div>
+    </div>
+</div>

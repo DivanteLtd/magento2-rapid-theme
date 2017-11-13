@@ -1,0 +1,19 @@
+<?php
+/**
+ * @package Divante/rapid
+ * @author Kacper Chara <kchara@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+?>
+<div class="block block-additional">
+    <div class="block-centered">
+        <?php echo $block->getChildHtml('advantages.with.account'); ?>
+        <p class="default-title"><strong><?php echo __('Already have an account?'); ?></strong></p>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <a href="#" class="action primary as-button"><span><?php /* @escapeNotVerified */ echo __('Sign In') ?></span></a>
+            </div>
+        </div>
+    </div>
+</div>

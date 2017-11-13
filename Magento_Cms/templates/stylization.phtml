@@ -1,0 +1,38 @@
+<?php
+/**
+ * @package Divante/rapid
+ * @author Kacper Chara <kchara@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+
+/**
+ * @var $block Magento\Framework\View\Element\Template
+ */
+?>
+
+<h2 class="second-style-heading line-on-sides">
+    <span><?php echo __('Stylization'); ?></span>
+</h2>
+
+<div class="banners">
+    <div class="banners-row">
+        <div class="banner banner-1-2" style="background-image: url(<?php echo $block->getViewFileUrl('images/content/banners/banner10.jpg'); ?>)"></div>
+        <div class="banner banner-1-2">
+            <!-- TODO: Insert widget Catalog Product List with 2 products blocks -->
+        </div>
+    </div>
+    <div class="banners-row">
+        <div class="banner banner-1-2">
+            <!-- TODO: Insert widget Catalog Product List with 2 products blocks -->
+        </div>
+        <div class="banner banner-1-2" style="background-image: url(<?php echo $block->getViewFileUrl('images/content/banners/banner11.jpg'); ?>)">
+            <div class="banner-content valign-bottom">
+                <h4 class="banner-tag">Outlet</h4>
+                <h3 class="banner-title">Original style</h3>
+                <p class="banner-description">Designer purses including satchels, <br>crossbody bags, clutches and wallets. <br>You'll find the widest range of <br>Handbags & purses products online.</p>
+                <a href="#" class="action on-dark-bg primary">SHOP NOW</a>
+            </div>
+        </div>
+    </div>
+</div>

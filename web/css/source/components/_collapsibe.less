@@ -1,0 +1,83 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+// Info: File styles i.a. collapsible content in cart (sidebar with estimations)
+
+& when (@media-common = true) {
+    .collapsible {
+        .collapsible-content {
+            display: none;
+        }
+
+        .collapsible-title {
+            color: @color-gray;
+            cursor: pointer;
+            display: block;
+            font-size: @font-size__m;
+            font-weight: 400;
+            position: relative;
+
+            &:before,
+            &:after {
+                background-color: @secondary__color;
+                content: '';
+                display: block;
+                position: absolute;
+            }
+
+            &:before {
+                height: 1px;
+                margin-top: -1px;
+                right: 0;
+                width: 11px;
+                top: 50%;
+            }
+
+            &:after {
+                height: 10px;
+                margin-top: -5px;
+                right: 5px;
+                top: 50%;
+                width: 1px;
+            }
+        }
+
+        &.active {
+            .collapsible-content {
+                display: block;
+            }
+
+            .collapsible-title {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .collapsible-borders {
+        .collapsible-title {
+            background-color: @color-white;
+            border: 1px dashed @color-gray-light;
+            color: @link__color;
+            font-size: 14px;
+            padding: 10px;
+
+            &:before {
+                right: 10px;
+            }
+
+            &:after {
+                right: 15px;
+            }
+
+            strong {
+                font-weight: 400;
+            }
+        }
+    }
+}

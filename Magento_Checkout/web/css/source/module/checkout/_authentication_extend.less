@@ -1,0 +1,40 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .authentication-wrapper {
+        z-index: 100;
+        margin-top: -30px;
+    }
+
+    .action-auth-toggle {
+        color: #fff;
+        .includeFontAwesomeIcon(@fa-var-user-o, false);
+        font-family: @font-family-name__first;
+
+        &:before {
+            margin-top: -2px;
+        }
+        
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+//.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    //.authentication-wrapper {
+        //margin-top: -53px;
+    //}
+//}

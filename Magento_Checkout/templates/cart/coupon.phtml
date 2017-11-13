@@ -1,0 +1,53 @@
+<?php
+/**
+ * @package Divante/rapid
+ * @author Kacper Chara <kchara@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<div class="block discount" id="block-discount">
+    <div class="title" data-role="title">
+        <strong id="block-discount-heading" role="heading" aria-level="2"><?php /* @escapeNotVerified */ echo __('Promo Code') ?></strong>
+    </div>
+    <div class="content" data-role="content" aria-labelledby="block-discount-heading">
+        <form id="discount-coupon-form"
+              action="<?php /* @escapeNotVerified */ echo $block->getUrl('checkout/cart/couponPost') ?>"
+              method="post"
+              data-mage-init='{"discountCode":{"couponCodeSelector": "#coupon_code",
+                                               "removeCouponSelector": "#remove-coupon",
+                                               "applyButton": "button.action.apply",
+                                               "cancelButton": "button.action.cancel"}}'>
+            <div class="fieldset coupon<?php strlen($block->getCouponCode()) ? ' applied' : ''?>">
+                <input type="hidden" name="remove" id="remove-coupon" value="0" />
+
+                <div class="collapsible" data-mage-init='{"collapsible":{"openedState": "active", "saveState": false}}'>
+                    <label for="coupon_code" class="label collapsible-title" data-role="trigger">
+                        <span><?php echo __('Do you have a promo code'); ?>?</span>
+                    </label>
+                    <div class="collapsible-content" data-role="content">
+                        <div class="field">
+                            <div class="control">
+                                <input type="text" class="input-text" id="coupon_code" name="coupon_code"
+                                       value="<?php echo $block->escapeHtml($block->getCouponCode()) ?>"
+                                       placeholder="<?php echo $block->escapeHtml(__('Apply discount code'));?>" />
+                            </div>
+                        </div>
+                        <div class="actions-toolbar">
+                            <?php if (!strlen($block->getCouponCode())): ?>
+                                <button class="action apply primary" type="button" value="<?php echo __('OK') ?>">
+                                    <span><?php echo __('OK') ?></span>
+                                </button>
+                            <?php else: ?>
+                                <button  type="button" class="action cancel primary" value="<?php echo __('Cancel Coupon') ?>"><span><?php echo __('Cancel Coupon') ?></span></button>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package Divante\rapid
+ * @author Bartosz Picho <bpicho@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="../../../../../vendor/magento/framework/Module/etc/module.xsd">
+    <head>
+        <link src="Magento_Theme::images/rapid-favicon-16.png" rel="icon" sizes="16x16"/>
+        <link src="Magento_Theme::images/rapid-favicon-32.png" rel="icon" sizes="32x32"/>
+    </head>
+</page>

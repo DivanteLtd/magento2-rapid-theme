@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package Divante/rapid
+ * @author Kacper Chara <kchara@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <container name="home.page.main.banner.section" htmlTag="section" htmlClass="home-page-main-banner-section" before="main.content">
+                <block class="Magento\Cms\Block\Block" name="home-page-main-banner-section">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">home-main-banner-block</argument>
+                    </arguments>
+                </block>
+            </container>
+            <container name="big.banner.section" htmlTag="section" htmlClass="big-banner-section">
+                <block class="Magento\Cms\Block\Block" name="big-banner-section">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">home-big-banner-block</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="home.page.specific.js"
+                   template="Magento_Cms::home-page-specific-js.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,122 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    // Default button - named by magento as "secondary"
+    button,
+    a.action.primary {
+        text-transform: uppercase;
+    }
+
+    // Link as a button - like default Magento button
+    a.as-button {
+        .lib-link-as-button();
+        .lib-button();
+        text-transform: uppercase;
+    }
+
+    // Button as a link
+    button.as-link {
+        .lib-button-as-link(
+            @_line-height: 16px
+        );
+        font-size: inherit;
+        text-transform: none;
+        font-family: @font-family-name__first;
+
+        &:active {
+            box-shadow: none;
+        }
+    }
+
+    // Additional classes for big and small buttons
+    button,
+    .action.primary,
+    .action.on-dark-bg,
+    a.as-button,
+    button.as-link {
+        &.size-small {
+            .lib-button-s();
+        }
+
+        &.size-large {
+            .lib-button-l();
+        }
+    }
+
+    .size-small {
+        .lib-button-s();
+    }
+
+    .size-large {
+        .lib-button-l();
+    }
+
+    .action {
+        &.on-dark-bg  {
+            .lib-button(
+                @_button-color: @button-on-dark-bg__color,
+                @_button-background: @button-on-dark-bg__background,
+                @_button-border: @button-on-dark-bg__border,
+                @_button-font-weight: @button-on-dark-bg__font-weight,
+
+                @_button-color-hover: @button-on-dark-bg__hover__color,
+                @_button-background-hover: @button-on-dark-bg__hover__background,
+                @_button-border-hover: @button-on-dark-bg__hover__border,
+
+                @_button-color-active:  @button-on-dark-bg__hover__color,
+                @_button-background-active: @button-on-dark-bg__hover__background,
+                @_button-border-active: @button-on-dark-bg__hover__border
+            );
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            text-transform: uppercase;
+        }
+
+        &.close {
+            .includeFontAwesomeIcon(@fa-var-times);
+        }
+
+        &.action-towishlist {
+            .includeFontAwesomeIcon(@fa-var-heart-o);
+        }
+
+        &.showcart {
+            .includeFontAwesomeIcon(@fa-var-shopping-bag);
+        }
+
+        &.action-edit {
+            .includeFontAwesomeIcon(@fa-var-pencil);
+        }
+
+        &.action-delete {
+            .includeFontAwesomeIcon(@fa-var-trash-o);
+        }
+
+        &.update-cart {
+            .includeFontAwesomeIcon(@fa-var-refresh, false);
+        }
+
+        &.remind,
+        &.action-remind {
+            .includeFontAwesomeIcon(@fa-var-key, false);
+            &:before {
+                font-size: 18px;
+                color: #44484e;
+                float: left;
+            }
+        }
+    }
+}

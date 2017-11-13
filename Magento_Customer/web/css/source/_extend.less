@@ -1,0 +1,289 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .login-container {
+        .block {
+            &.block-customer-login {
+                background: @color-gray-light0;
+            }
+
+            .block-title {
+                border-bottom: none;
+            }
+
+            .block-centered {
+                max-width: 360px;
+            }
+
+            .fieldset > .field > .control {
+                width: 100%;
+                max-width: 263px;
+            }
+
+            .fieldset > .field.required > .label:after {
+                display: none;
+            }
+        }
+
+        .fieldset {
+            &:after {
+                display: none;
+            }
+        }
+
+        .form .fieldset > .field {
+            margin-bottom: 25px;
+        }
+
+        .form-login .field {
+            padding: 0;
+        }
+
+        .advantages-with-account {
+            margin-top: 35px;
+        }
+    }
+
+    .advantages-with-account {
+        .advantages-title {
+            margin-bottom: 15px;
+            .lib-font-size(@font-size__xl);
+        }
+
+        .advantages-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 0;
+
+            li {
+                .lib-font-size(@font-size__m);
+                padding-left: 30px;
+                position: relative;
+            }
+
+            .fa {
+                font-size: 18px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+    //
+    //  Common styles Registration and Login Page
+    //  ---------------------------------------------
+    .login-container,
+    .registration-container {
+        .block {
+            border: 1px dotted @color-gray;
+            padding: 25px 15px;
+
+            .block-centered {
+                width: 100%;
+                margin: 0 auto;
+            }
+
+        }
+
+        .fieldset > .field > .control {
+            .input-text {
+                .lib-input-placeholder(@color-gray)
+            }
+        }
+
+        .form .fieldset > .field {
+            margin-bottom: 25px;
+        }
+
+        .fieldset > .field:not(.choice) > .label {
+            padding: 0;
+            width: 100%;
+            text-align: left;
+            font-weight: 400;
+        }
+
+        .fieldset > .field.required > .label {
+            color: @color-black-lighten;
+        }
+
+        .block-title {
+            &:extend(.abs-login-block-title all);
+            .lib-font-size(18);
+            text-align: center;
+            border: none;
+            overflow: hidden;
+            text-transform: uppercase;
+
+            > strong {
+                position: relative;
+                display: inline-block;
+                padding: 0 20px;
+                min-width: 220px;
+
+                &:before, &:after {
+                    content: '';
+                    width: 1000px;
+                    height: 1px;
+                    background: @color-gray;
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -1px;
+                }
+
+                &:before {
+                    right: 100%;
+                }
+
+                &:after {
+                    left: 100%;
+                }
+            }
+        }
+    }
+
+    //
+    //  Registration Page
+    //  ---------------------------------------------
+    .registration-container {
+        overflow: hidden;
+
+        .block {
+            &.block-registration {
+                .block-centered {
+                    max-width: 558px;
+                }
+            }
+
+            &.block-additional {
+                .block-centered {
+                    max-width: 280px;
+                }
+
+                .default-title {
+                    .lib-font-size(@font-size__xl);
+                }
+            }
+        }
+
+        .form .field .label {
+            color: @color-black-lighten;
+        }
+
+        .field.password {
+            clear: both;
+        }
+
+        .field.choice.newsletter {
+            margin-bottom: 15px;
+        }
+
+        .fieldset {
+            margin: 0;
+        }
+
+        .fieldset > .legend {
+            display: none;
+        }
+
+        .fieldset > .field:not(.choice) > .control {
+            width: 100%;
+        }
+
+        .advantages-with-account {
+            margin-bottom: 35px;
+        }
+    }
+
+    //
+    //  Password Strength Meter
+    //  ---------------------------------------------
+
+    .password-strength-meter {
+        height: auto;
+        line-height: 20px;
+        padding: 8px 10px;
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .login-container {
+        margin-top: 45px;
+
+        .block {
+            min-height: 400px;
+        }
+    }
+
+    .login-container,
+    .registration-container {
+        .block {
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+
+        .actions-toolbar {
+            .primary {
+                .action {
+                    margin-right: 25px;
+                }
+            }
+
+            .secondary {
+                float: left;
+            }
+        }
+    }
+
+    .registration-container {
+        .block {
+            &.block-registration {
+                width: 65.8%;
+                float: left;
+            }
+
+            &.block-additional {
+                width: 31.8%;
+                float: right;
+            }
+        }
+
+        .fieldset > .field {
+            float: left;
+            width: 48%;
+
+            &.field-name-firstname,
+            &.password {
+                margin-right: 4%;
+            }
+        }
+    }
+
+    .form.password.reset,
+    .form.send.confirmation,
+    .form.password.forget,
+    .form.create.account {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+
+//
+//  Divante Extend
+//  _____________________________________________
+
+@import '_extend-specific.less';

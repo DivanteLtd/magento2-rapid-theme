@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package Divante\rapid
+ * @author Bartosz Picho <bpicho@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+-->
+<theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
+    <title>Divante Rapid</title>
+    <parent>Magento/blank</parent>
+    <media>
+        <preview_image>media/preview.png</preview_image>
+    </media>
+</theme>

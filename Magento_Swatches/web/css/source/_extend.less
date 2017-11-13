@@ -1,0 +1,132 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+// Info: This file overwriting swatches.css file
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    body { // body tag added to override styles
+        .swatch-option {
+            border: 1px solid @color-black-lighten;
+            display: inline-block;
+
+            &.image:not(.disabled):hover,
+            &.color:not(.disabled):hover {
+                outline: none;
+                border: 1px solid @color-black-lighten;
+            }
+
+            &.selected {
+                outline: 1px solid @color-black-lighten;
+                border: 1px solid @color-black-lighten;
+            }
+
+            &:not(.disabled):hover {
+                outline: none;
+            }
+
+            &:hover {
+                border-color: @color-brown;
+                color: @color-brown;
+            }
+
+            &.color,
+            &.text {
+                width: 30px;
+                height: 30px;
+                margin-bottom: 10px;
+                line-height: 30px;
+            }
+
+            &.text {
+                padding: 0;
+                font-weight: 400;
+                font-size: 14px;
+            }
+
+            &.color {
+                &.selected {
+                    .includeFontAwesomeIcon(@fa-var-check);
+
+                    &:before {
+                        color: @color-white;
+                        font-size: 22px;
+                        margin-top: -4px;
+                        margin-left: -1px;
+                    }
+                }
+            }
+
+
+            &.disabled {
+                pointer-events: none;
+                opacity: 0.5;
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+        .swatch-attribute.size,
+        .swatch-attribute.manufacturer {
+            .swatch-option {
+                border: 1px solid @color-black-lighten;
+                background: @color-white;
+                color: @color-black-lighten;
+
+                &:hover {
+                    border-color: @color-brown;
+                    color: @color-brown;
+                }
+
+                &.selected {
+                    border: 1px solid @color-black-lighten;
+                    outline: 1px solid @color-black-lighten;
+                    font-weight: 700;
+                    color: @color-black-lighten;
+                }
+
+                &.disabled {
+                    border-color: #b1b1b1;
+                    color: #b1b1b1;
+                }
+            }
+        }
+
+        .swatch-option-tooltip .corner:after,
+        .swatch-option-tooltip-layered .corner:after {
+            left: -16px;
+        }
+
+        .swatch-option-tooltip {
+            min-width: 30px;
+        }
+    }
+
+    .products-grid {
+        .swatch-attribute-options {
+            text-align: center;
+            margin-top: 0;
+
+            .swatch-option {
+                float: none;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+//
+//  Divante Extend
+//  _____________________________________________
+
+@import '_extend-specific.less';

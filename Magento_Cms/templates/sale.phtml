@@ -1,0 +1,41 @@
+<?php
+/**
+ * @package Divante/rapid
+ * @author Kacper Chara <kchara@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+
+/**
+ * @var $block Magento\Framework\View\Element\Template
+ */
+?>
+
+<h2 class="second-style-heading line-on-sides">
+    <span><?php echo __('Sale'); ?></span>
+</h2>
+
+<div class="banners">
+    <div class="banners-row">
+        <div class="banner banner-1-3 banner-type-link" style="background-image: url(<?php echo $block->getViewFileUrl('images/content/banners/banner6.jpg'); ?>)">
+            <div class="banner-content valign-middle">
+                <a href="#" class="link-overlay"></a>
+                <h3 class="banner-title">WATCHES <small>SAVE 45%</small></h3>
+            </div>
+        </div>
+
+        <div class="banner banner-1-3 banner-type-link" style="background-image: url(<?php echo $block->getViewFileUrl('images/content/banners/banner7.jpg'); ?>)">
+            <div class="banner-content valign-middle">
+                <a href="#" class="link-overlay"></a>
+                <h3 class="banner-title">BRACELETS <small>SAVE 45%</small></h3>
+            </div>
+        </div>
+
+        <div class="banner banner-1-3 banner-type-link" style="background-image: url(<?php echo $block->getViewFileUrl('images/content/banners/banner8.jpg'); ?>)">
+            <div class="banner-content valign-middle">
+                <a href="#" class="link-overlay"></a>
+                <h3 class="banner-title">SUNGLASSES <small>SAVE 45%</small></h3>
+            </div>
+        </div>
+    </div>
+</div>

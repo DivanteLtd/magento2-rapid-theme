@@ -1,0 +1,62 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+// Info: File styles social links
+
+& when (@media-common = true) {
+    .socials {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        > li {
+            display: inline-block;
+            padding: 0 20px 0 0;
+        }
+
+        a {
+            display: inline-block;
+
+            &.facebook {
+                .includeFontAwesomeIcon(@fa-var-facebook-square);
+            }
+
+            &.twitter {
+                .includeFontAwesomeIcon(@fa-var-twitter-square);
+            }
+
+            &.google {
+                .includeFontAwesomeIcon(@fa-var-google-plus-square);
+            }
+
+            &.youtube {
+                .includeFontAwesomeIcon(@fa-var-youtube-square);
+            }
+
+            &.pinterest {
+                .includeFontAwesomeIcon(@fa-var-pinterest-square);
+            }
+
+            &.facebook,
+            &.twitter,
+            &.google,
+            &.youtube,
+            &.pinterest {
+                &:before {
+                    color: @color-white;
+                    font-size: 24px;
+                }
+
+                &:hover {
+                    &:before {
+                        color: @color-brown;
+                    }
+                }
+            }
+        }
+    }
+}

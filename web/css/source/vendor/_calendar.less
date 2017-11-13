@@ -1,0 +1,193 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .ui-datepicker {
+        display: none;
+        z-index: 999999 !important;
+
+        &:before,
+        &:after {
+            border-style: solid;
+            content: '';
+            display: block;
+            height: 0;
+            left: 48%;
+            position: absolute;
+            width: 0;
+        }
+
+        &:before {
+            border-width: 0 5px 8px 5px;
+            border-color: transparent transparent @form-element-input__border-color transparent;
+            top: -9px;
+        }
+
+        &:after {
+            border-width: 0 4.5px 7px 4.5px;
+            border-color: transparent transparent @color-white transparent;
+            margin-left: 1px;
+            top: -8px;
+        }
+
+        .ui-datepicker-header {
+            position: relative;
+            padding: .2em 0;
+
+            &:before {
+                background-color: @color-white;
+                content: '';
+                display: block;
+                height: 1px;
+                width: 9px;
+                position: absolute;
+                top: -6px;
+                left: 48%;
+            }
+        }
+
+        .ui-datepicker-prev,
+        .ui-datepicker-next {
+            display: inline-block;
+            width: auto;
+            height: auto;
+            line-height: 28px;
+            padding: 0 5px;
+
+            .ui-icon {
+                display: none;
+            }
+        }
+
+        .ui-datepicker-prev {
+            .includeFontAwesomeIcon(@fa-var-angle-left);
+
+            left: 10px;
+        }
+
+        .ui-datepicker-next {
+            .includeFontAwesomeIcon(@fa-var-angle-right);
+
+            right: 10px;
+        }
+
+        .ui-datepicker-title {
+            color: @primary__color;
+            font-size: 16px;
+            margin: 0 2.3em;
+            line-height: 1.8em;
+            text-align: center;
+        }
+    }
+
+    .ui-datepicker {
+        .lib-css(box-shadow, @focus__box-shadow);
+
+        background: @color-white;
+        border: 1px solid @form-element-input__border-color;
+        box-sizing: border-box;
+        padding: 5px;
+        margin-top: 15px;
+
+        .ui-datepicker-header {
+            background: transparent;
+            border: none;
+        }
+
+        .ui-datepicker-title {
+            font-weight: 600;
+
+            .ui-datepicker-month {
+                width: 47%;
+                margin-right: 0;
+            }
+
+            .ui-datepicker-year {
+                width: auto;
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .ui-datepicker-calendar {
+            border: 0;
+            border-spacing: 7px 2px;
+            border-collapse: separate;
+            background: @color-white;
+            margin-bottom: 0;
+            padding: 0;
+            width: auto;
+
+            th {
+                border: none;
+                background-color: transparent;
+                color: @secondary__color;
+                height: 30px;
+                font-size: 16px;
+                padding: 0;
+                text-align: center;
+                text-transform: uppercase;
+                width: 30px;
+            }
+
+            td {
+                border: none;
+                background-color: transparent !important;
+
+                a {
+                    color: @link__color;
+                    display: block;
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 0;
+                    width: 30px;
+                    text-align: center;
+                }
+
+                .ui-state-hover {
+                    background: @link__color;
+                    color: @color-white;
+                }
+
+                .ui-state-highlight {
+                    background: @link__color;
+                    color: @color-white;
+                }
+            }
+
+            .ui-datepicker-week-col {
+                border: #cfcfcf 1px solid;
+                text-align: center;
+            }
+
+            .ui-state-active {
+                background: #8ad1c5;
+                color: @color-white;
+            }
+
+            .ui-datepicker-today {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .control-calendar {
+        position: relative;
+
+        .ui-datepicker-trigger {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}

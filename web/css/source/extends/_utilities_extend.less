@@ -1,0 +1,40 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Input placeholder - overwriting lib/web/css/source/lib/_utilities.less
+//  ---------------------------------------------
+
+.lib-input-placeholder(
+    @_input-placeholder-color: @form-element-input-placeholder__color,
+    @_input-placeholder-font-weight: @form-element-input__font-weight,
+    @_input-placeholder-font-style: @form-element-input-placeholder__font-style // Custom added parameter
+) {
+    &::-webkit-input-placeholder {
+        .lib-css(color, @_input-placeholder-color);
+        .lib-css(font-weight, @_input-placeholder-font-weight);
+        .lib-css(font-style, @_input-placeholder-font-style);
+    }
+
+    &:-moz-placeholder {
+        .lib-css(color, @_input-placeholder-color);
+        .lib-css(font-weight, @_input-placeholder-font-weight);
+        .lib-css(font-style, @_input-placeholder-font-style);
+    }
+
+    &::-moz-placeholder {
+        .lib-css(color, @_input-placeholder-color);
+        .lib-css(font-weight, @_input-placeholder-font-weight);
+        .lib-css(font-style, @_input-placeholder-font-style);
+    }
+
+    &:-ms-input-placeholder {
+        .lib-css(color, @_input-placeholder-color);
+        .lib-css(font-weight, @_input-placeholder-font-weight);
+        .lib-css(font-style, @_input-placeholder-font-style);
+    }
+}

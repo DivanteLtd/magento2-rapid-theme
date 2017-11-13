@@ -1,0 +1,102 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Action addto
+//  ---------------------------------------------
+
+& when (@media-common = true) {
+    .abs-actions-addto-gridlist {
+        .lib-icon-font(
+            @_icon-font: 'FontAwesome',
+            @_icon-font-content: '',
+            @_icon-font-size: 18px,
+            @_icon-font-color: @addto-color,
+            @_icon-font-color-hover: @addto-hover-color,
+            @_icon-font-text-hide: true,
+            @_icon-font-vertical-align: middle,
+            @_icon-font-line-height: normal
+        );
+
+        &:before {
+            overflow: visible;
+        }
+    }
+}
+
+//
+//  Shopping cart items
+//  ---------------------------------------------
+
+& when (@media-common = true) {
+    .abs-shopping-cart-items {
+        .action {
+            &.continue {
+                border-radius: 0;
+
+                .lib-button-icon(@fa-var-angle-left,
+                    @_icon-font: 'FontAwesome',
+                    @_icon-font-size: inherit,
+                    @_icon-font-line-height: inherit,
+                    @_icon-font-margin: 0 3px 0 0
+                );
+
+                padding: @button__padding;
+            }
+
+            &.update {
+                .lib-button-icon(@fa-var-refresh,
+                    @_icon-font: 'FontAwesome',
+                    @_icon-font-size: inherit,
+                    @_icon-font-line-height: inherit,
+                    @_icon-font-margin: 0 3px 0 0
+                );
+
+                padding: @button__padding;
+            }
+        }
+    }
+}
+
+//
+//  Remove button for blocks
+//  ---------------------------------------------
+
+& when (@media-common = true) {
+    .abs-remove-button-for-blocks {
+        .lib-icon-font(
+                @icon-remove,
+            @_icon-font-size: 26px,
+            @_icon-font-line-height: 15px,
+            @_icon-font-text-hide: true,
+            @_icon-font-color: @color-gray19,
+            @_icon-font-color-hover: @color-black,
+            @_icon-font-color-active: @color-gray19,
+            @_icon-font-margin: 2px 0 0
+        );
+    }
+}
+
+//
+//  Margin for forms
+//  ---------------------------------------------
+
+@abs-margin-for-forms-desktop: {
+    .lib-css(margin-left, 0);
+};
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .abs-margin-for-forms-desktop {
+        @abs-margin-for-forms-desktop();
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .abs-margin-for-forms-desktop-s {
+        @abs-margin-for-forms-desktop();
+    }
+}

@@ -1,0 +1,41 @@
+<?php
+/**
+ * @package Divante/rapid
+ * @author Kacper Chara <kchara@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<section class="newsletter-section">
+    <div class="block newsletter">
+        <div class="title">
+            <strong><?php /* @escapeNotVerified */ echo __('Subscribe to our newsletter') ?></strong>
+        </div>
+        <div class="content">
+            <form class="form subscribe"
+                novalidate
+                action="<?php /* @escapeNotVerified */ echo $block->getFormActionUrl() ?>"
+                method="post"
+                data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+                id="newsletter-validate-detail">
+                <div class="field newsletter">
+                    <label class="label" for="newsletter"><span><?php /* @escapeNotVerified */ echo __('Sign Up for Our Newsletter:') ?></span></label>
+                    <div class="control">
+                        <input name="email" type="email" id="newsletter"
+                                    placeholder="<?php /* @escapeNotVerified */ echo __('Enter your email address') ?>"
+                                    data-validate="{required:true, 'validate-email':true}"/>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button class="action subscribe" title="<?php /* @escapeNotVerified */ echo __('Subscribe') ?>" type="submit">
+                        <span><?php /* @escapeNotVerified */ echo __('Subscribe') ?></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

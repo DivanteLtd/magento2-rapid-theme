@@ -1,0 +1,24 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .product.data.items {
+        .lib-data-tabs(
+            @_tab-control-height: auto
+        );
+
+        > .item.title:not(.disabled):not(.active) {
+            > .switch {
+                .lib-css(padding-bottom, @tab-control__padding-top);
+            }
+        }
+    }
+}

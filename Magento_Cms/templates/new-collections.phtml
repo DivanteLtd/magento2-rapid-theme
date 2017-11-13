@@ -1,0 +1,38 @@
+<?php
+/**
+ * @package Divante/rapid
+ * @author Kacper Chara <kchara@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+
+/**
+ * @var $block Magento\Framework\View\Element\Template
+ */
+?>
+
+<h2 class="second-style-heading line-on-sides">
+    <span><?php echo __('New Collections'); ?></span>
+</h2>
+
+<div class="banners">
+    <div class="banners-row">
+        <div class="banner banner-1-2" style="background-image: url(<?php echo $block->getViewFileUrl('images/content/banners/banner4.jpg'); ?>)">
+            <div class="banner-content valign-top">
+                <h4 class="banner-tag">Outlet</h4>
+                <h3 class="banner-title">Fancy trainers</h3>
+                <p class="banner-description">Put a spring in your step with our fantastic selection of women’s trainers.</p>
+                <a href="#" class="action on-dark-bg primary">SHOP NOW</a>
+            </div>
+        </div>
+
+        <div class="banner banner-1-2" style="background-image: url(<?php echo $block->getViewFileUrl('images/content/banners/banner5.jpg'); ?>)">
+            <div class="banner-content valign-top">
+                <h4 class="banner-tag">Outlet</h4>
+                <h3 class="banner-title">Original style</h3>
+                <p class="banner-description">From classic denim to flirty and flared, the mini is our skirt hero this season</p>
+                <a href="#" class="action on-dark-bg primary">SHOP NOW</a>
+            </div>
+        </div>
+    </div>
+</div>

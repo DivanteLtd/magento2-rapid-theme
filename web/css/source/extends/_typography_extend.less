@@ -1,0 +1,35 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    // Font Awesome Icons
+    .lib-font-face(
+        @family-name: 'FontAwesome',
+        @font-path: '@{baseDir}fonts/font-awesome/fontawesome-webfont',
+        @font-weight: normal,
+        @font-style: normal
+    );
+
+    // Dosis
+    .lib-font-face(
+        @family-name: 'Dosis',
+        @font-path: '@{baseDir}fonts/dosis/regular/dosis-regular-webfont',
+        @font-weight: 400,
+        @font-style: normal
+    );
+
+    .lib-font-face(
+        @family-name: 'Dosis',
+        @font-path: '@{baseDir}fonts/dosis/medium/dosis-medium-webfont',
+        @font-weight: 500,
+        @font-style: normal
+    );
+}

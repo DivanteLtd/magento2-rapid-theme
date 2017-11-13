@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package Divante\rapid
+ * @author Bartosz Picho <bpicho@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license See LICENSE_DIVANTE.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_img_width" xsi:type="number">200</argument>
+                <argument name="logo_img_height" xsi:type="number">25</argument>
+            </arguments>
+        </referenceBlock>
+
+        <move element="navigation.sections" destination="header.container" after="-"/>
+        <move element="page.messages" destination="main" before="-"/>
+
+        <move element="form.subscribe" destination="footer-container" before="-"/>
+
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true"/>
+
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="footer.columns"
+                   template="Magento_Theme::html/footer/columns.phtml">
+                <block class="Magento\Cms\Block\Block" name="custom-footer">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">custom-footer</argument>
+                    </arguments>
+                </block>
+            </block>
+        </referenceContainer>
+
+        <move element="copyright" destination="footer-container" after="-"/>
+    </body>
+</page>

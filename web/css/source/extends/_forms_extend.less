@@ -1,0 +1,210 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    // Filters
+    a:hover [type=radio],
+    a:hover [type=checkbox] {
+        + label,
+        + .label,
+        + span {
+            &:before {
+                border-color: @checkbox__hover__border__color;
+            }
+
+            &:after {
+                background-color: @checkbox__hover__background__color;
+            }
+        }
+    }
+
+    // Checkboxes and radios buttons
+    [type=checkbox],
+    [type=radio]:not([name^="rating"]) {
+        position: absolute;
+        left: -9999px;
+
+        + label,
+        + .label,
+        + span {
+            cursor: pointer;
+            display: inline-block;
+            min-height: @checkbox__size;
+            line-height: 20px;
+            padding-left: @checkbox__size + 10;
+            padding-top: 0;
+            position: relative;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                box-sizing: border-box;
+            }
+
+            @checkbox__offset__fill: 2;
+
+            &:before {
+                border: @checkbox__border__size solid @checkbox__border__color;
+                background-color: @checkbox__background__color;
+                width: @checkbox__size;
+                height: @checkbox__size;
+                top: 0;
+                left: 0;
+            }
+
+            &:after {
+                background-color: @checkbox__background__color;
+                width: @checkbox__size - (@checkbox__border__size*2) - (@checkbox__offset__fill*2);
+                height: @checkbox__size - (@checkbox__border__size*2) - (@checkbox__offset__fill*2);
+                top: @checkbox__border__size + @checkbox__offset__fill;
+                left: @checkbox__border__size + @checkbox__offset__fill;
+            }
+        }
+
+        &:hover {
+            + label,
+            + .label,
+            + span {
+                &:before {
+                    border-color: @checkbox__hover__border__color;
+                }
+
+                &:after {
+                    background-color: @checkbox__hover__background__color;
+                }
+            }
+        }
+
+        &:checked {
+            + label,
+            + .label,
+            + span {
+                &:before {
+                    border-color: @checkbox__hover__border__color;
+                }
+
+                &:after {
+                    background-color: @checkbox__hover__background__color;
+                }
+            }
+        }
+
+        &:disabled {
+            + label,
+            + .label,
+            + span {
+                &:before {
+                    border-color: @checkbox__disabled__border__color;
+                }
+
+                &:after {
+                    background-color: @checkbox__disabled__background__color;
+                }
+            }
+        }
+
+        &:checked:disabled {
+            + label,
+            + .label,
+            + span {
+                &:before {
+                    border-color: @checkbox__disabled-and-checked__border__color;
+                }
+
+                &:after {
+                    background-color: @checkbox__disabled-and-checked__background__color;
+                }
+            }
+        }
+
+        &.mage-error {
+            + label,
+            + .label,
+            + span {
+                &:before {
+                    border-color: @form-element-validation__border-error;
+                }
+            }
+        }
+    }
+
+    [type=radio]:not([name^="rating"]) {
+        + label,
+        + .label,
+        + span {
+            &:before {
+                border-radius: 50%;
+            }
+            &:after {
+                border-radius: 50%;
+            }
+        }
+        &:checked {
+            + label,
+            + .label,
+            + span {
+                &:after {
+                    content: '';
+                }
+            }
+        }
+    }
+
+    // Input Qty
+    .qty-input-holder {
+        overflow: hidden;
+        min-width: 96px;
+
+        .decrease-qty,
+        .increase-qty,
+        .input-text {
+            float: left;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #444444;
+            padding: 0 4px;
+            margin-left: 3px;
+            text-align: center;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        .decrease-qty,
+        .increase-qty {
+            color: #444444;
+            line-height: 28px;
+            background: @color-white;
+            padding: 0;
+
+            &:before {
+                font-size: 22px;
+                line-height: 22px;
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+
+        .decrease-qty {
+            &:before {
+                content: '-';
+            }
+        }
+
+        .increase-qty {
+            &:before {
+                content: '+';
+            }
+        }
+    }
+}

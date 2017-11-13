@@ -1,0 +1,349 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+// Info: File styles: home page sections, basic carousel and banners blocks
+
+& when (@media-common = true) {
+    .brands-section {
+        overflow: hidden;
+    }
+
+    .new-products-section {
+        .block.widget .products-grid .product-item {
+            margin-bottom: 0;
+
+            &:nth-child(2n+1) {
+                clear: left;
+            }
+        }
+    }
+
+    .home-page-main-banner-section {
+        .banner {
+            background-position: center;
+            margin-bottom: 0;
+
+            .banner-content {
+                display: block;
+            }
+        }
+    }
+
+    .big-banner-section {
+        .banner {
+            margin-bottom: 0;
+        }
+    }
+
+    .stylization-section {
+        .block.widget.block-products-list {
+            width: 100%;
+        }
+    }
+
+    .banners, .banners-row {
+        overflow: hidden;
+    }
+
+    .banners-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .banner {
+        background-size: cover;
+        display: flex;
+        margin: 0 auto 20px;
+
+        &.banner-1-2 {
+            max-width: 558px;
+            min-height: 274px;
+            width: 100%;
+        }
+
+        &.banner-1-1 {
+            min-height: 548px;
+            width: 100%;
+        }
+
+        &.banner-1-3 {
+            max-width: 364px;
+            min-height: 140px;
+            width: 100%;
+        }
+
+        &.banner-type-link {
+            position: relative;
+
+            .banner-title {
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 36px;
+                margin-bottom: 0;
+
+                small {
+                    color: inherit;
+                    display: block;
+                    font-size: 18px;
+                    margin-top: 5px;
+                }
+            }
+
+            .link-overlay {
+                display: block;
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+
+        &.big-banner {
+            display: block;
+            width: 100%;
+
+            .banner-internal {
+                max-width: 1170px;
+                padding-left: 15px;
+                padding-right: 15px;
+                width: 100%;
+                margin: 0 auto;
+                min-height: 420px;
+                display: flex;
+            }
+
+            .banner-tag {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+
+            .banner-title {
+                font-size: 48px;
+                line-height: 48px;
+                margin-bottom: 30px;
+            }
+            
+            .banner-content {
+                padding-left: 0;
+                padding-right: 0;
+                align-content: center;
+            }
+        }
+
+        .banner-content {
+            overflow: hidden;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+            &.valign-top {
+                align-content: flex-start;
+            }
+
+            &.valign-middle {
+                align-content: center;
+                align-items: center;
+            }
+
+            &.valign-bottom {
+                align-content: flex-end;
+            }
+        }
+
+        .banner-tag,
+        .banner-title,
+        .banner-description {
+            width: 100%;
+        }
+
+        .banner-tag {
+            color: @color-white;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin: 0 0 20px;
+        }
+
+        .banner-title {
+            color: @color-white;
+            font-family: 'Dosis', 'Open Sans', Helvetica, Arial, sans-serif;;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 36px;
+            margin: 0 0 15px;
+            text-align: left;
+            text-transform: none;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        .banner-description {
+            color: @color-white;
+            font-size: 14px;
+            margin: 0 0 15px;
+            line-height: 20px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    // Products widgets inside the banner
+    .banner {
+        .block.widget.grid {
+            .block-title {
+                display: none;
+            }
+            .products-grid {
+                .product-item {
+                    width: 50%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .basic-carousel {
+        overflow: hidden;
+        margin: 0 auto 25px;
+        position: relative;
+        height: 60px;
+        
+        .equal-height-slides:not(.slick-initialized) {
+            > div {
+                float: left;
+            }
+        }
+
+        .slick-slider {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        .slick-slide {
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .slide-cms {
+        background: rgba(0, 0, 0, 0.54);
+        padding: 15px;
+        display: inline-block;
+        min-width: 290px;
+
+        p, h2, h3 {
+            color: @color-white;
+        }
+
+        .slide-cms-tag {
+            color: @color-white;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 0 20px;
+        }
+
+        .slide-cms-title {
+            font-family: @font-family-name__second;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 36px;
+            margin: 0 0 30px;
+            text-align: left;
+            text-transform: none;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .new-products-section,
+    .page-layout-1column .new-products-section {
+        .block.widget .products-grid .product-item {
+            width: 100%/2;
+
+            &:nth-child(2n+1) {
+                clear: none;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .new-products-section,
+    .page-layout-1column .new-products-section {
+        .block.widget .products-grid .product-item {
+            width: 100%/3;
+
+            &:nth-child(3n+1) {
+                clear: left;
+            }
+        }
+    }
+
+    .banner {
+        float: left;
+
+        &.banner-1-2 {
+            margin-right: 2%;
+            width: 49%;
+
+            &:nth-child(2n+0) {
+                margin-right: 0;
+            }
+        }
+
+        &.banner-1-3 {
+            margin-right: 2%;
+            width: 32%;
+
+            &:nth-child(3n+0) {
+                margin-right: 0;
+            }
+        }
+
+        &.banner-type-link {
+            max-width: 100%;
+        }
+
+        .banner-description {
+            br {
+                display: inline;
+            }
+        }
+    }
+
+    .home-page-main-banner-section {
+        .banner.big-banner {
+            .banner-content {
+                padding-top: 210px;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .new-products-section,
+    .page-layout-1column .new-products-section {
+        .block.widget .products-grid .product-item {
+            width: 100%/4;
+
+            &:nth-child(3n+1) {
+                clear: none;
+            }
+        }
+    }
+}

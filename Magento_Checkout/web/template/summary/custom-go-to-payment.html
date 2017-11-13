@@ -1,0 +1,27 @@
+<!--
+/**
+* @package Divante/rapid
+* @author Kacper Chara <kchara@divante.pl>
+* @copyright 2017 Divante Sp. z o.o.
+* @license See LICENSE_DIVANTE.txt for license details.
+*/
+-->
+
+<!-- ko if: isDisplayed() -->
+<footer class="summary-footer">
+    <div class="title" data-role="title">
+        <strong role="heading">
+            <!-- ko if: getItemsQty() == 1 -->
+            <!-- ko i18n: 'Item in Cart:' --><!-- /ko -->
+            <!-- /ko -->
+            <!-- ko if: getItemsQty() > 1 -->
+            <!-- ko i18n: 'Items in Cart:' --><!-- /ko -->
+            <!-- /ko -->
+            <span class="count" data-bind="text: getItemsQty()"></span>
+        </strong>
+    </div>
+    <button type="button" class="action primary continue size-large" data-bind="click: goToReviewsAndPayments" >
+        <!-- ko i18n: 'go to REVIEW & PAYMENTS' --><!-- /ko -->
+    </button>
+</footer>
+<!-- /ko -->

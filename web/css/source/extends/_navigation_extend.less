@@ -1,0 +1,121 @@
+// /**
+// * @package Divante/rapid
+// * @author Kacper Chara <kchara@divante.pl>
+// * @copyright 2017 Divante Sp. z o.o.
+// * @license See LICENSE_DIVANTE.txt for license details.
+// */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .nav-toggle {
+        position: static;
+        float: left;
+        margin-top: 43px;
+
+        &:hover:before {
+            color: @color-brown;
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .nav-open .nav-toggle:after {
+        z-index: 2;
+    }
+
+    .nav-sections {
+        background: @color-black;
+
+        .switcher {
+            padding: 0.8rem 20px;
+        }
+
+        .switcher-trigger {
+            strong {
+                display: inline-block;
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .nav-sections-item-title {
+        border: none;
+        text-transform: uppercase;
+
+        a {
+            color: @color-white;
+        }
+    }
+
+    .nav-sections-item-content {
+        padding-bottom: 25px;
+    }
+
+    .navigation {
+        .parent {
+            .level-top {
+                &:after {
+                    top: -10px;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .nav-sections {
+        height: 33px;
+        min-height: 33px;
+        border-top: 1px solid rgba(0, 0, 0, .42);
+        border-bottom: 1px solid rgba(255, 255, 255, .29);
+        margin: 0;
+        background: transparent;
+        position: relative;
+        z-index: 5;
+
+        &:before {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: rgba(255, 255, 255, .29);
+            z-index: 1;
+        }
+    }
+
+    .navigation {
+        > ul {
+            max-width: 1170px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        ul {
+            li {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .navigation .level0 > .level-top {
+        text-transform: @navigation-desktop-level0-item__text-transform;
+        display: inline-block;
+    }
+}
