@@ -4,16 +4,6 @@ Free, fully responsive Magento 2 theme created for the Fashion industry - but no
 This theme is an extension of the default theme for Magento 2 "theme-frontend-blank".
 It was written to streamline the development process by adjusting the most frequently modified parts of the site to this industry.
 
-## Who is developing Theme Frontend Rapid ?
-<p align="center">
-    <a href="https://divante.co/">
-        <img height="100" src="http://divante.co/static/img/logo.svg">
-    </a>
-</p>
-
-Divante has been delivering the highest quality e-commerce solutions since its inception in 2008. Our main focus is to create the most elegant and effective e-commerce services. We connect the latest technology with a great business approach.
-Visit our website for more information  <a href="https://divante.co/">Divante.co</a> 
-
 ## Compatibility
 * This module was written based on Magento 2.1.9 
 
@@ -39,7 +29,7 @@ Its composition includes, among others:
 * Pagination  
 
 Uikit is available at: baseUrl / uikit  
-example: http://magento.dev/uikit
+example: http://rapid.divante.co/uikit
 
 ## Setup
 
@@ -60,10 +50,28 @@ example: http://magento.dev/uikit
  
 ## Live Demo
 
-http://rapid.test.divante.pl/
+http://rapid.divante.co/
     
 ## License
 * The Grouped Products Manager module is licensed under the terms of the MIT license.
     
 ## Standards & Code Quality
 * This module respects all Magento2 code quality rules and our own PHPCS and PHPMD rulesets.
+
+## Why use Magento 2 Theme Frontend Rapid
+46% increase in revenue - this is how much you can achieve with an online shop. That’s why it’s the high time for you to start thinking seriously about your online store. Working with many Fashion eStores we learned from the habits of fashion eShops users. It helps us to create a product adjusted to their needs. See our [case studies](https://divante.co/case-studies/ "case studies"). 
+
+## About Authors
+<p align="center">
+    <a href="https://divante.co/">
+        <img height="100" src="http://divante.co/static/img/logo.svg">
+    </a>
+</p>
+
+We are a Software House from Europe, existing from 2008 and employing about 150 people. Our core competencies are built around Magento, Pimcore and bespoke software projects (we love Symfony3, Node.js, Angular, React, Vue.js). We specialize in sophisticated integration projects trying to connect hardcore IT with good product design and UX.
+
+We work for Clients like INTERSPORT, ING, Odlo, Onderdelenwinkel or CDP, the company that produced The Witcher game. We develop two projects: [Open Loyalty](http://www.openloyalty.io/ "Open Loyalty") - loyalty program in open source and [Vue.js Storefront](https://github.com/DivanteLtd/vue-storefront "Vue.js Storefront").
+
+We are part of the OEX Group which is listed on the Warsaw Stock Exchange. Our annual revenue has been growing at a minimum of about 30% year on year.
+
+Visit our website [Divante.co](https://divante.co/ "Divante.co") for more information.
