@@ -1,0 +1,62 @@
+<?php
+/**
+ * @package   Divante/rapid
+ * @author    Kacper Chara <kchara@divante.pl>
+ * @copyright 2017 Divante Sp. z o.o.
+ * @license   See LICENSE_DIVANTE.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * @var $block \Magento\Theme\Block\Html\Notices
+ */
+?>
+<?php if ($block->displayNoscriptNotice()): ?>
+    <noscript>
+        <div class="message global noscript">
+            <div class="content">
+                <p>
+                    <strong><?php /* @escapeNotVerified */ echo __('JavaScript seems to be disabled in your browser.'); ?></strong>
+                    <span><?php /* @escapeNotVerified */ echo __('For the best experience on our site, be sure to turn on Javascript in your browser.'); ?></span>
+                </p>
+            </div>
+        </div>
+    </noscript>
+<?php endif; ?>
+<?php if ($block->displayNoLocalStorageNotice()): ?>
+    <div class="notice global site local_storage" style="display: none;">
+        <div class="content">
+            <p>
+                <strong><?php /* @escapeNotVerified */ echo __('Local Storage seems to be disabled in your browser.'); ?></strong><br />
+                <?php /* @escapeNotVerified */ echo __('For the best experience on our site, be sure to turn on Local Storage in your browser.'); ?>
+            </p>
+        </div>
+    </div>
+    <script>
+require(['jquery'], function(jQuery){
+
+        // <![CDATA[
+        (function($) {
+            var test = 'test';
+            try {
+                localStorage.setItem(test, test);
+                localStorage.removeItem(test);
+            } catch(e) {
+                $(".notice.global.site.local_storage").show();
+            }
+        })(jQuery);
+        // ]]>
+
+});
+</script>
+<?php endif; ?>
+<?php if ($block->displayDemoNotice()): ?>
+    <div class="message global demo">
+        <div class="content">
+            <p>This is <a href="http://go.divante.co/divante-for-fashion/"><strong>Magento 2 Theme Frontend Rapid</strong></a> demo store. No orders will be fulfilled.</p>
+        </div>
+    </div>
+<?php endif; ?>
