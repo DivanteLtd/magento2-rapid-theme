@@ -46,7 +46,11 @@ example: http://rapid.divante.co/uikit
     
 #### Features on front
 
- ![front](README_MEDIA/Rapid.jpg)
+ ![front](README_MEDIA/rapid_magento_fashion_1.png)
+ ![front](README_MEDIA/rapid_magento_fashion_products.png)
+ ![front](README_MEDIA/rapid_magento_fashion_product_cart.png)
+ ![front](README_MEDIA/rapid_magento_fashion_shopping_cart.png)
+ ![front](README_MEDIA/rapid_magento_fashion_checkout.png)
  
 ## Live Demo
 
