@@ -265,6 +265,10 @@
         .product-item-name {
             font-size: 16px;
             line-height: 19px;
+            height: 19px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
 
             a {
                 .lib-css(color, @color-black-lighten);
@@ -389,12 +393,12 @@
             margin-top: -24px;
             z-index: -1;
             opacity: 0;
-            padding: 15px 18px;
+            padding: 15px 12px;
         }
 
         .product-item {
             &:hover {
-                padding-left: 40px;
+                padding-left: 30px;
             }
 
             > .product {
