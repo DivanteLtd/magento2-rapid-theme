@@ -10,6 +10,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <move element="checkout.cart.coupon" destination="cart.summary" before="-"/>
+        <move element="checkout.cart.summary.title" destination="cart.summary.title"/>
+
         <referenceBlock name="page.main.title">
             <arguments>
                 <argument name="css_class" xsi:type="string">shopping-cart-title</argument>
@@ -17,7 +19,6 @@
         </referenceBlock>
         <referenceBlock name="cart.summary">
             <container name="cart.summary.title" htmlTag="div" htmlClass="cart-summary-title" before="-"/>
-            <move element="checkout.cart.summary.title" destination="cart.summary.title"/>
         </referenceBlock>
 
         <referenceContainer name="checkout.cart.noitems">
