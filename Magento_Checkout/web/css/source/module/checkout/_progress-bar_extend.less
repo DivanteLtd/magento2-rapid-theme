@@ -10,10 +10,10 @@
 //  _____________________________________________
 @checkout-progress-bar__font-size: 14px;
 @checkout-progress-bar__font-weight: 400;
-@checkout-progress-bar-item__background-color: @color-gray;
+@checkout-progress-bar-item__background-color: #b1b1b1;
 @checkout-progress-bar-item__border-radius: 1px;
 @checkout-progress-bar-item__width: 280px;
-@checkout-progress-bar-item__active__background-color: @color-gray;
+@checkout-progress-bar-item__active__background-color: #b1b1b1;
 @checkout-progress-bar-item-element__width: 30px;
 @checkout-progress-bar-item-element-outer-radius__width: 1px;
 
@@ -91,18 +91,18 @@
 
         &._complete {
             &:before {
-                .lib-css(background, @color-brown);
+                .lib-css(background, #a66b29);
             }
 
             > span {
-                .lib-css(color, @color-brown);
+                .lib-css(color, #a66b29);
 
                 &:before {
-                    .lib-css(background, @color-brown);
+                    .lib-css(background, #a66b29);
                 }
 
                 &:after {
-                    .lib-css(background, @color-brown);
+                    .lib-css(background, #a66b29);
                     .lib-css(color, @color-white);
                 }
             }

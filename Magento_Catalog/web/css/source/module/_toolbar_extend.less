@@ -10,7 +10,7 @@
 //  _____________________________________________
 
 @toolbar-mode-icon-font-size: 24px;
-@toolbar-element-background: @color-gray-light;
+@toolbar-element-background: #f0f0f0;
 
 & when (@media-common = true) {
     .toolbar-products {
@@ -23,7 +23,7 @@
                 @icon-arrow-up,
             @_icon-font-size: 28px,
             @_icon-font-line-height: 36px,
-            @_icon-font-color: @color-brown,
+            @_icon-font-color: #a66b29,
             @_icon-font-color-hover: @primary__color,
             @_icon-font-text-hide: true
         );
@@ -36,14 +36,14 @@
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .modes-mode {
-        .lib-css(color, @color-brown);
-        border: 1px solid @color-brown;
+        .lib-css(color, #a66b29);
+        border: 1px solid #a66b29;
         margin-right: 10px;
         padding: 10px;
         text-align: center;
 
         &:last-child {
-            border-right: 1px solid @color-brown;
+            border-right: 1px solid #a66b29;
         }
 
         &:not(.active) {
@@ -68,7 +68,7 @@
             @_icon-font: 'FontAwesome',
             @_icon-font-size: @toolbar-mode-icon-font-size,
             @_icon-font-text-hide: true,
-            @_icon-font-color: @color-brown,
+            @_icon-font-color: #a66b29,
             @_icon-font-color-hover: @primary__color
         );
     }

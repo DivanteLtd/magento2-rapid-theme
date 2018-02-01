@@ -11,7 +11,6 @@
     <body>
         <move element="checkout.cart.coupon" destination="cart.summary" before="-"/>
         <move element="checkout.cart.summary.title" destination="cart.summary.title"/>
-
         <referenceBlock name="page.main.title">
             <arguments>
                 <argument name="css_class" xsi:type="string">shopping-cart-title</argument>
@@ -20,7 +19,6 @@
         <referenceBlock name="cart.summary">
             <container name="cart.summary.title" htmlTag="div" htmlClass="cart-summary-title" before="-"/>
         </referenceBlock>
-
         <referenceContainer name="checkout.cart.noitems">
             <container name="cart.empty.additional.banners.section" htmlClass="cart-empty-banners-section" htmlTag="section">
                 <block class="Magento\Framework\View\Element\Template" name="checkout.cart.noitems.additional.banners"

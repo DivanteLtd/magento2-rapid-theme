@@ -1,7 +1,7 @@
 // /**
 // * @package Divante/rapid
 // * @author Kacper Chara <kchara@divante.pl>
-// * @copyright 2017 Divante Sp. z o.o.
+// * @copyright 2018 Divante Sp. z o.o.
 // * @license See LICENSE_DIVANTE.txt for license details.
 // */
 
@@ -24,10 +24,10 @@
     }
 
     .rapid-image {
-        width: 0;
-        height: 0;
-        display: block;
-        visibility: hidden;
+        width: 0 !important;
+        height: 0 !important;
+        display: block !important;
+        visibility: hidden !important;
     }
 
     //
@@ -89,15 +89,12 @@
         background: @footer__background-color no-repeat 100% 100% url('@{baseDir}images/content/footer.jpg');
 
         .copyright {
-            border-top: 1px solid @color-beige;
+            border-top: 1px solid #feeed3;
             color: #fffefe;
             font-size: 14px;
             padding: 20px 15px;
             text-align: center;
-
-            p {
-                margin: 0;
-            }
+            display: block;
         }
 
         .checkout-footer-links {
@@ -163,7 +160,7 @@
             }
 
             &[aria-selected="true"] {
-                color: @color-brown;
+                color: #a66b29;
             }
 
             &[aria-expanded="true"],
@@ -316,7 +313,7 @@
         text-transform: uppercase;
 
         &:after {
-            background-color: @color-gray;
+            background-color: #b1b1b1;
             content: '';
             display: block;
             height: 1px;
