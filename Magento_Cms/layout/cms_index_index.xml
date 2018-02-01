@@ -3,7 +3,7 @@
 /**
  * @package Divante/rapid
  * @author Kacper Chara <kchara@divante.pl>
- * @copyright 2017 Divante Sp. z o.o.
+ * @copyright 2018 Divante Sp. z o.o.
  * @license See LICENSE_DIVANTE.txt for license details.
  */
 -->
@@ -24,11 +24,6 @@
                     </arguments>
                 </block>
             </container>
-        </referenceContainer>
-        <referenceContainer name="before.body.end">
-            <block class="Magento\Framework\View\Element\Template"
-                   name="home.page.specific.js"
-                   template="Magento_Cms::home-page-specific-js.phtml"/>
         </referenceContainer>
     </body>
 </page>

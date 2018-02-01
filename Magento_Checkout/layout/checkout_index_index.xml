@@ -10,17 +10,12 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="header.panel.wrapper" remove="true"/>
-
         <move element="logo" destination="header-wrapper" before="-"/>
-
         <referenceBlock name="top.search" remove="true"/>
         <referenceBlock name="minicart" remove="true"/>
-
         <referenceBlock name="navigation.sections" remove="true"/>
-
         <referenceContainer name="footer.columns" remove="true"/>
         <referenceBlock name="form.subscribe" remove="true"/>
-
         <referenceContainer name="footer-container">
             <container name="footer.checkout.links" htmlTag="ul" htmlClass="checkout-footer-links">
                 <block class="Magento\Framework\View\Element\Html\Link\Current">
@@ -31,7 +26,6 @@
                 </block>
             </container>
         </referenceContainer>
-
         <referenceBlock name="checkout.root">
             <arguments>
                 <argument name="jsLayout" xsi:type="array">

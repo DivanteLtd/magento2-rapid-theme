@@ -1,7 +1,7 @@
 {
   "name": "divante-ltd/theme-frontend-rapid",
   "description": "Divante Rapid Theme for Magento 2",
-  "version": "2.1.6",
+  "version": "2.2.0",
   "require": {
     "divante-ltd/module-uikit": "^1.0"
   },

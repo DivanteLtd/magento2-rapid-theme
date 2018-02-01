@@ -16,15 +16,11 @@
                 <argument name="logo_img_height" xsi:type="number">25</argument>
             </arguments>
         </referenceBlock>
-
         <move element="navigation.sections" destination="header.container" after="-"/>
         <move element="page.messages" destination="main" before="-"/>
-
         <move element="form.subscribe" destination="footer-container" before="-"/>
-
         <referenceBlock name="footer_links" remove="true"/>
         <referenceBlock name="report.bugs" remove="true"/>
-
         <referenceContainer name="footer">
             <block class="Magento\Framework\View\Element\Template" name="footer.columns"
                    template="Magento_Theme::html/footer/columns.phtml">
@@ -35,7 +31,10 @@
                 </block>
             </block>
         </referenceContainer>
-
         <move element="copyright" destination="footer-container" after="-"/>
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="rapid.image"
+                   template="Magento_Theme::rapid.phtml" />
+        </referenceContainer>
     </body>
 </page>

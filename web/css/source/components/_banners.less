@@ -5,7 +5,7 @@
 // * @license See LICENSE_DIVANTE.txt for license details.
 // */
 
-// Info: File styles: home page sections, basic carousel and banners blocks
+// Info: File styles: home page sections, banners blocks
 
 & when (@media-common = true) {
     .brands-section {
@@ -214,33 +214,6 @@
         }
     }
 
-    .basic-carousel {
-        overflow: hidden;
-        margin: 0 auto 25px;
-        position: relative;
-        height: 60px;
-        
-        .equal-height-slides:not(.slick-initialized) {
-            > div {
-                float: left;
-            }
-        }
-
-        .slick-slider {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            left: 0;
-            top: 0;
-        }
-
-        .slick-slide {
-            img {
-                margin: 0 auto;
-            }
-        }
-    }
-
     .slide-cms {
         background: rgba(0, 0, 0, 0.54);
         padding: 15px;
@@ -267,6 +240,24 @@
             margin: 0 0 30px;
             text-align: left;
             text-transform: none;
+        }
+    }
+
+    .simple-picture-list {
+        &.logos-of-brands {
+            list-style: none;
+            display: block;
+            margin: 0 0 20px;
+            padding: 0;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0 5px;
+                max-height: 60px;
+                max-width: 48%;
+            }
         }
     }
 }
@@ -333,6 +324,14 @@
             .banner-content {
                 padding-top: 210px;
             }
+        }
+    }
+
+    .simple-picture-list {
+        &.logos-of-brands {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 }
