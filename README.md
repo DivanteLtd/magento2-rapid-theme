@@ -35,7 +35,7 @@ example: http://rapid.divante.co/uikit
 
 #### Installation details
 
-* `composer require divante/theme-frontend-rapid`
+* `composer require divante-ltd/theme-frontend-rapid`
 * `php bin/magento setup:upgrade`
 
 #### Admin configuration
